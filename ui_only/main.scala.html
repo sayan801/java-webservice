@@ -1,0 +1,1639 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Welcome to HMS</title>
+    <link rel="stylesheet" media="screen" href="Assets/stylesheets/bootstrap.min.css">
+	<link rel="stylesheet" media="screen" href="Assets/stylesheets/font-awesome.min.css">
+    <link rel="stylesheet" media="screen" href="Assets/stylesheets/style.css">
+    <link rel="shortcut icon" type="image/png" href="Assets/images/icon.png">
+  </head>
+  <body>
+   <div class="site-wrapper">
+    <div class="site-wrapper-inner">
+     <div class="cover-container">
+      <div class="masthead clearfix">
+       <div class="inner">
+        <h3 class="masthead-brand">
+         <span class="fa-stack fa-lg">
+  		  <i class="fa fa-circle fa-stack-2x" style="color: #A61D36;"></i>
+  		  <i class="fa fa-medkit fa-stack-1x"></i>
+		 </span>HMS
+	    </h3>
+        <h4>
+		 <ul class="nav masthead-nav">
+          <li class="active">
+			  <a href="#">
+			   <span class="fa-stack">
+				<i class="fa fa-square-o fa-stack-2x"></i>
+				<i class="fa fa-home fa-fw fa-stack-1x"></i>
+			   </span>&nbsp; Home
+			  </a>
+		  </li>
+		  <li>
+			  <a href="#">
+			   <span class="fa-stack">
+				<i class="fa fa-square-o fa-stack-2x"></i>
+				<i class="fa fa-hospital-o fa-fw fa-stack-1x"></i>
+			   </span>&nbsp; Features
+			  </a>
+		  </li>
+		  <li>
+			  <a href="#">
+			   <span class="fa-stack">
+				<i class="fa fa-square-o fa-stack-2x"></i>
+				<i class="fa fa-microphone fa-fw fa-stack-1x"></i>
+			   </span>&nbsp; Contact
+			  </a>
+		  </li>
+         </ul>
+        </h4>
+       </div>
+      </div>
+      <div id="intro" class="inner cover">
+       <h1 class="cover-heading">Hospital Management System</h1>
+       <p class="lead">Hospital management system will provide a software solution for managing Hospital more efficiently and effectively.It will enable Hospital administrator to implement an automatic Hospital management system by which a centralized system can keep track of activities happening in hospital.</p>
+       <p class="lead">
+        <a id="btnSignin" class="btn btn-lg btn-default">Sign in&nbsp; &nbsp; <i class="fa fa-sign-in"></i></a>
+       </p>
+      </div>
+	  <div style="display:none;" id="signIn" class="inner cover">
+	    <form class="form-signin" role="form">
+         <h2 class="form-signin-heading">Please sign in</h2>
+         <input type="email" class="form-control" placeholder="Email address" required autofocus>
+         <input type="password" class="form-control" placeholder="Password" required>
+         <label class="checkbox">
+          <input type="checkbox" value="remember-me"> Remember me
+         </label>
+         <button id="login" class="btn btn-lg btn-primary btn-block">Sign in</button>
+        </form>
+      </div> <!-- /container -->
+      <div id="menuItems" class="menu-items"  style="display:none;">
+		  <p style="padding-bottom:10px;">
+			  <button class="btn btn-lg btn-primary" data-toggle="modal" data-target="#doctorModal">
+				<span class="fa-stack fa-2x">
+					<i class="fa fa-square-o fa-stack-2x"></i>
+					<i class="fa fa-user-md fa-stack-1x"></i>
+				</span>Doctors&nbsp;&nbsp;
+			  </button>&nbsp;&nbsp;&nbsp;
+			  <button class="btn btn-lg btn-success" data-toggle="modal" data-target="#patientModal">
+				<span class="fa-stack fa-2x">
+					<i class="fa fa-square-o fa-stack-2x"></i>
+					<i class="fa fa-wheelchair fa-stack-1x"></i>
+				</span>Patients&nbsp;&nbsp;&nbsp;
+			  </button>&nbsp;&nbsp;&nbsp;
+		      <button class="btn btn-lg btn-warning" data-toggle="modal" data-target="#employeeModal">
+				<span class="fa-stack fa-2x">
+					<i class="fa fa-square-o fa-stack-2x"></i>
+					<i class="fa fa-users fa-stack-1x"></i>
+				</span>Employees
+			  </button>
+		  </p>
+		  <p style="padding-bottom:10px;">
+			  <button class="btn btn-lg btn-danger" data-toggle="modal" data-target="#billingModal">
+				<span class="fa-stack fa-2x">
+					<i class="fa fa-square-o fa-stack-2x"></i>
+					<i class="fa fa-money fa-stack-1x"></i>
+				</span>Billing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			  </button>&nbsp;&nbsp;&nbsp;
+			  <button class="btn btn-lg btn-info" data-toggle="modal" data-target="#resourceModal">
+				<span class="fa-stack fa-2x">
+					<i class="fa fa-square-o fa-stack-2x"></i>
+					<i class="fa fa-recycle fa-stack-1x"></i>
+				</span>Resource
+			  </button>&nbsp;&nbsp;&nbsp;
+		      <button class="btn btn-lg btn-primary" data-toggle="modal" data-target="#instrumentModal">
+				<span class="fa-stack fa-2x">
+					<i class="fa fa-square-o fa-stack-2x"></i>
+					<i class="fa fa-stethoscope fa-stack-1x"></i>
+				</span>Instruments
+			  </button>
+		  </p>
+		  <p>
+			  <button class="btn btn-lg btn-info" data-toggle="modal" data-target="#settingsModal">
+				<span class="fa-stack fa-2x">
+					<i class="fa fa-square-o fa-stack-2x"></i>
+					<i class="fa fa-gears fa-stack-1x"></i>
+				</span>Settings&nbsp;&nbsp;
+			  </button>&nbsp;&nbsp;&nbsp;
+			  <button class="btn btn-lg btn-warning" data-toggle="modal" data-target="#printModal">
+				<span class="fa-stack fa-2x">
+					<i class="fa fa-square-o fa-stack-2x"></i>
+					<i class="fa fa-print fa-stack-1x"></i>
+				</span>Print&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			  </button>&nbsp;&nbsp;&nbsp;
+		      <button class="btn btn-lg btn-danger" data-toggle="modal" data-target="#registrationModal">
+				<span class="fa-stack fa-2x">
+					<i class="fa fa-square-o fa-stack-2x"></i>
+					<i class="fa fa-pencil-square-o fa-stack-1x"></i>
+				</span>Registration
+			  </button>
+		  </p>		  
+	  </div>
+	  
+<!--For Doctors -->	  
+<div id="doctorModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+ <div class="modal-dialog">
+   <div class="modal-content">
+    <div class="modal-header">
+     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+     <h4 class="modal-title" id="doctorModalLabel">Doctors</h4>
+    </div>
+    <div class="modal-body">
+     <ul id="doctorTab" class="nav nav-tabs nav-justified" role="tablist">
+      <li class="active"><a href="#showDoctor">Show Doctor</a></li>
+	  <li><a href="#addNewDoctor">Add new</a></li>
+	  <li><a href="#printDoctor">Print</a></li>
+	  <li><a href="#deleteDoctor">Delete</a></li>
+	 </ul>
+	 <br>
+	<div id="doctorTabContent" class="tab-content"> 
+     <div id="showDoctor" class="tab-pane fade active in panel panel-primary">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Doctor's details</div>
+      <div class="panel-body">
+        <p></p>
+      </div>
+      <!-- Table -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone No.</th>
+            <th>Expertise</th>
+            <th>Duty Cycle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Dr.Suvash</td>
+            <td>Barasat</td>
+            <td>9830908765</td>
+            <td>General</td>
+            <td>2p.m-5p.m.</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Dr. Chetan</td>
+            <td>Chennai</td>
+            <td>9831908765</td>
+            <td>General</td>
+            <td>4p.m-5p.m.</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Dr.Majumder</td>
+            <td>Kokata</td>
+            <td>9830923655</td>
+            <td>General</td>
+            <td>Always</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+     <div id="addNewDoctor" class="tab-pane fade panel panel-info">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Doctor's details</div>
+      <div class="panel-body">
+        <p></p>
+      </div>
+      <form class="form-horizontal" role="form">
+			<div class="form-group">
+				<label for="inputEmail3" class="col-sm-4 control-label">Doctor's Name</label>
+				<div class="col-sm-6">
+					<input type="name" class="form-control" id="doctorName" placeholder="DoctorName">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-4 control-label">Address</label>
+				<div class="col-sm-6">
+					<input type="name" class="form-control" id="doctorAddress" placeholder="Address">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-4 control-label">Phone number</label>
+				<div class="col-sm-6">
+					<input type="name" class="form-control" id="doctorPhone" placeholder="Ex:9932457689">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-4 control-label">Expertise</label>
+				<div class="col-sm-6">
+					<input type="name" class="form-control" id="doctorExpertise" placeholder="Expertise">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-4 control-label">Duty cycle</label>
+				<div class="col-sm-6">
+					<input type="name" class="form-control" id="doctorDutyCycle" placeholder="Duty cycle">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-4 col-sm-3">
+					<button type="submit" class="btn btn-info">Save and continue</button>
+				</div>
+			</div>
+		</form>
+     </div>
+     <div id="printDoctor" class="tab-pane fade panel panel-warning">
+             <!-- Default panel contents -->
+      <div class="panel-heading">Doctor's details</div>
+      <div class="panel-body">
+        <p class="text-right"><button type="button" class="btn btn-primary">Print</button></p>
+      </div>
+      <!-- Table -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone No.</th>
+            <th>Expertise</th>
+            <th>Duty Cycle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Dr.Suvash</td>
+            <td>Barasat</td>
+            <td>9830908765</td>
+            <td>General</td>
+            <td>2p.m-5p.m.</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Dr. Chetan</td>
+            <td>Chennai</td>
+            <td>9831908765</td>
+            <td>General</td>
+            <td>4p.m-5p.m.</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Dr.Majumder</td>
+            <td>Kokata</td>
+            <td>9830923655</td>
+            <td>General</td>
+            <td>Always</td>
+          </tr>
+        </tbody>
+      </table>
+     </div>
+     <div id="deleteDoctor" class="tab-pane fade panel panel-danger">
+                  <!-- Default panel contents -->
+      <div class="panel-heading">Doctor's details</div>
+      <div class="panel-body">
+        <p class="text-right"><button type="button" class="btn btn-primary">Delete</button></p>
+      </div>
+      <!-- Table -->
+      <table class="table">
+        <thead>
+          <tr>
+			<th><input type="checkbox">Select all</th>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone No.</th>
+            <th>Expertise</th>
+            <th>Duty Cycle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+			<td><input type="checkbox"></td>
+            <td>1</td>
+            <td>Dr.Suvash</td>
+            <td>Barasat</td>
+            <td>9830908765</td>
+            <td>General</td>
+            <td>2p.m-5p.m.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>2</td>
+            <td>Dr. Chetan</td>
+            <td>Chennai</td>
+            <td>9831908765</td>
+            <td>General</td>
+            <td>4p.m-5p.m.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>3</td>
+            <td>Dr.Majumder</td>
+            <td>Kokata</td>
+            <td>9830923655</td>
+            <td>General</td>
+            <td>Always</td>
+          </tr>
+        </tbody>
+      </table>  
+     </div>
+    </div>
+   </div>
+   <div class="modal-footer">
+    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+   </div>
+  </div><!-- /.modal-content -->
+ </div><!-- /.modal-dialog -->
+</div>
+  
+<!--For Patients -->	  
+<div id="patientModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+ <div class="modal-dialog">
+   <div class="modal-content">
+    <div class="modal-header">
+     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+     <h4 class="modal-title" id="patientModalLabel">patients</h4>
+    </div>
+    <div class="modal-body">
+     <ul id="patientTab" class="nav nav-tabs nav-justified" role="tablist">
+      <li class="active"><a href="#showpatient">Show patient</a></li>
+	  <li><a href="#addNewpatient">Add new</a></li>
+	  <li><a href="#printpatient">Print</a></li>
+	  <li><a href="#deletepatient">Delete</a></li>
+	 </ul>
+	 <br>
+	<div id="patientTabContent" class="tab-content"> 
+     <div id="showpatient" class="tab-pane fade active in panel panel-primary">
+      <!-- Default panel contents -->
+      <div class="panel-heading">patient's details</div>
+      <div class="panel-body">
+        <p></p>
+      </div>
+      <!-- Table -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone No.</th>
+            <th>Department</th>
+            <th>Admission Period</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Dr.Suvash</td>
+            <td>Barasat</td>
+            <td>9830908765</td>
+            <td>General</td>
+            <td>2p.m-5p.m.</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Dr. Chetan</td>
+            <td>Chennai</td>
+            <td>9831908765</td>
+            <td>General</td>
+            <td>4p.m-5p.m.</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Dr.Majumder</td>
+            <td>Kokata</td>
+            <td>9830923655</td>
+            <td>General</td>
+            <td>2 days</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+     <div id="addNewpatient" class="tab-pane fade panel panel-info">
+      <!-- Default panel contents -->
+      <div class="panel-heading">patient's details</div>
+      <div class="panel-body">
+        <p></p>
+      </div>
+      <form class="form-horizontal" role="form">
+			<div class="form-group">
+				<label for="inputEmail3" class="col-sm-4 control-label">patient's Name</label>
+				<div class="col-sm-6">
+					<input type="name" class="form-control" id="patientName" placeholder="patientName">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-4 control-label">Address</label>
+				<div class="col-sm-6">
+					<input type="name" class="form-control" id="patientAddress" placeholder="Address">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-4 control-label">Phone number</label>
+				<div class="col-sm-6">
+					<input type="name" class="form-control" id="patientPhone" placeholder="Ex:9932457689">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-4 control-label">Department</label>
+				<div class="col-sm-6">
+					<input type="name" class="form-control" id="patientDepartment" placeholder="Department">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-4 control-label">Admission Period</label>
+				<div class="col-sm-6">
+					<input type="name" class="form-control" id="patientAdmissionPeriod" placeholder="Admission Period">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-4 col-sm-3">
+					<button type="submit" class="btn btn-info">Save and continue</button>
+				</div>
+			</div>
+		</form>
+     </div>
+     <div id="printpatient" class="tab-pane fade panel panel-warning">
+             <!-- Default panel contents -->
+      <div class="panel-heading">patient's details</div>
+      <div class="panel-body">
+        <p class="text-right"><button type="button" class="btn btn-primary">Print</button></p>
+      </div>
+      <!-- Table -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone No.</th>
+            <th>Department</th>
+            <th>Admission Period</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Dr.Suvash</td>
+            <td>Barasat</td>
+            <td>9830908765</td>
+            <td>General</td>
+            <td>2p.m-5p.m.</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Dr. Chetan</td>
+            <td>Chennai</td>
+            <td>9831908765</td>
+            <td>General</td>
+            <td>4p.m-5p.m.</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Dr.Majumder</td>
+            <td>Kokata</td>
+            <td>9830923655</td>
+            <td>General</td>
+            <td>Always</td>
+          </tr>
+        </tbody>
+      </table>
+     </div>
+     <div id="deletepatient" class="tab-pane fade panel panel-danger">
+                  <!-- Default panel contents -->
+      <div class="panel-heading">patient's details</div>
+      <div class="panel-body">
+        <p class="text-right"><button type="button" class="btn btn-primary">Delete</button></p>
+      </div>
+      <!-- Table -->
+      <table class="table">
+        <thead>
+          <tr>
+			<th><input type="checkbox">Select all</th>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone No.</th>
+            <th>Department</th>
+            <th>Admission Period</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+			<td><input type="checkbox"></td>
+            <td>1</td>
+            <td>Dr.Suvash</td>
+            <td>Barasat</td>
+            <td>9830908765</td>
+            <td>General</td>
+            <td>2p.m-5p.m.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>2</td>
+            <td>Dr. Chetan</td>
+            <td>Chennai</td>
+            <td>9831908765</td>
+            <td>General</td>
+            <td>4p.m-5p.m.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>3</td>
+            <td>Dr.Majumder</td>
+            <td>Kokata</td>
+            <td>9830923655</td>
+            <td>General</td>
+            <td>Always</td>
+          </tr>
+        </tbody>
+      </table>  
+     </div>
+    </div>
+   </div>
+   <div class="modal-footer">
+    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+   </div>
+  </div><!-- /.modal-content -->
+ </div><!-- /.modal-dialog -->
+</div>
+  
+<!--For Employees -->	  
+<div id="employeeModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+ <div class="modal-dialog">
+   <div class="modal-content">
+    <div class="modal-header">
+     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+     <h4 class="modal-title" id="employeeModalLabel">employees</h4>
+    </div>
+    <div class="modal-body">
+     <ul id="employeeTab" class="nav nav-tabs nav-justified" role="tablist">
+      <li class="active"><a href="#showemployee">Show employee</a></li>
+	  <li><a href="#addNewemployee">Add new</a></li>
+	  <li><a href="#printemployee">Print</a></li>
+	  <li><a href="#deleteemployee">Delete</a></li>
+	 </ul>
+	 <br>
+	<div id="employeeTabContent" class="tab-content"> 
+     <div id="showemployee" class="tab-pane fade active in panel panel-primary">
+      <!-- Default panel contents -->
+      <div class="panel-heading">employee's details</div>
+      <div class="panel-body">
+        <p></p>
+      </div>
+      <!-- Table -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone No.</th>
+            <th>Expertise</th>
+            <th>Duty Cycle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Dr.Suvash</td>
+            <td>Barasat</td>
+            <td>9830908765</td>
+            <td>General</td>
+            <td>2p.m-5p.m.</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Dr. Chetan</td>
+            <td>Chennai</td>
+            <td>9831908765</td>
+            <td>General</td>
+            <td>4p.m-5p.m.</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Dr.Majumder</td>
+            <td>Kokata</td>
+            <td>9830923655</td>
+            <td>General</td>
+            <td>Always</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+     <div id="addNewemployee" class="tab-pane fade panel panel-info">
+      <!-- Default panel contents -->
+      <div class="panel-heading">employee's details</div>
+      <div class="panel-body">
+        <p></p>
+      </div>
+      <form class="form-horizontal" role="form">
+			<div class="form-group">
+				<label for="inputEmail3" class="col-sm-4 control-label">employee's Name</label>
+				<div class="col-sm-6">
+					<input type="name" class="form-control" id="employeeName" placeholder="employeeName">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-4 control-label">Address</label>
+				<div class="col-sm-6">
+					<input type="name" class="form-control" id="employeeAddress" placeholder="Address">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-4 control-label">Phone number</label>
+				<div class="col-sm-6">
+					<input type="name" class="form-control" id="employeePhone" placeholder="Ex:9932457689">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-4 control-label">Expertise</label>
+				<div class="col-sm-6">
+					<input type="name" class="form-control" id="employeeExpertise" placeholder="Expertise">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-4 control-label">Duty cycle</label>
+				<div class="col-sm-6">
+					<input type="name" class="form-control" id="employeeDutyCycle" placeholder="Duty cycle">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-4 col-sm-3">
+					<button type="submit" class="btn btn-info">Save and continue</button>
+				</div>
+			</div>
+		</form>
+     </div>
+     <div id="printemployee" class="tab-pane fade panel panel-warning">
+             <!-- Default panel contents -->
+      <div class="panel-heading">employee's details</div>
+      <div class="panel-body">
+        <p class="text-right"><button type="button" class="btn btn-primary">Print</button></p>
+      </div>
+      <!-- Table -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone No.</th>
+            <th>Expertise</th>
+            <th>Duty Cycle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Dr.Suvash</td>
+            <td>Barasat</td>
+            <td>9830908765</td>
+            <td>General</td>
+            <td>2p.m-5p.m.</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Dr. Chetan</td>
+            <td>Chennai</td>
+            <td>9831908765</td>
+            <td>General</td>
+            <td>4p.m-5p.m.</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Dr.Majumder</td>
+            <td>Kokata</td>
+            <td>9830923655</td>
+            <td>General</td>
+            <td>Always</td>
+          </tr>
+        </tbody>
+      </table>
+     </div>
+     <div id="deleteemployee" class="tab-pane fade panel panel-danger">
+                  <!-- Default panel contents -->
+      <div class="panel-heading">employee's details</div>
+      <div class="panel-body">
+        <p class="text-right"><button type="button" class="btn btn-primary">Delete</button></p>
+      </div>
+      <!-- Table -->
+      <table class="table">
+        <thead>
+          <tr>
+			<th><input type="checkbox">Select all</th>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone No.</th>
+            <th>Expertise</th>
+            <th>Duty Cycle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+			<td><input type="checkbox"></td>
+            <td>1</td>
+            <td>Dr.Suvash</td>
+            <td>Barasat</td>
+            <td>9830908765</td>
+            <td>General</td>
+            <td>2p.m-5p.m.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>2</td>
+            <td>Dr. Chetan</td>
+            <td>Chennai</td>
+            <td>9831908765</td>
+            <td>General</td>
+            <td>4p.m-5p.m.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>3</td>
+            <td>Dr.Majumder</td>
+            <td>Kokata</td>
+            <td>9830923655</td>
+            <td>General</td>
+            <td>Always</td>
+          </tr>
+        </tbody>
+      </table>  
+     </div>
+    </div>
+   </div>
+   <div class="modal-footer">
+    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+   </div>
+  </div><!-- /.modal-content -->
+ </div><!-- /.modal-dialog -->
+</div>
+  
+<!--For Billing -->	  
+<div id="billingModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+ <div class="modal-dialog">
+   <div class="modal-content">
+    <div class="modal-header">
+     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+     <h4 class="modal-title" id="doctorModalLabel">Invoice for purchase</h4>
+    </div>
+    <div class="modal-body">
+		<div class="row">
+        <div class="col-xs-12">
+            <div class="text-center">
+                <i class="fa fa-search-plus pull-left icon"></i>
+                <h2>Invoice for purchase #33221</h2>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-xs-12 col-md-3 col-lg-3 pull-left">
+                    <div class="panel panel-default height">
+                        <div class="panel-heading">Billing Details</div>
+                        <div class="panel-body">
+                            <strong>Somnath Saha:</strong><br>
+                            1111 Army Navy Colony<br>
+                            Shyambazar<br>
+                            Kolkata<br>
+                            <strong>22 203</strong><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-3 col-lg-3">
+                    <div class="panel panel-default height">
+                        <div class="panel-heading">Payment Information</div>
+                        <div class="panel-body">
+                            <strong>Card Name:</strong> Visa<br>
+                            <strong>Card Number:</strong> ***** 332<br>
+                            <strong>Exp Date:</strong> 09/2020<br>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-3 col-lg-3">
+                    <div class="panel panel-default height">
+                        <div class="panel-heading">Order Preferences</div>
+                        <div class="panel-body">
+                            <strong>Gift:</strong> No<br>
+                            <strong>Express Delivery:</strong> Yes<br>
+                            <strong>Insurance:</strong> No<br>
+                            <strong>Coupon:</strong> No<br>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-3 col-lg-3 pull-right">
+                    <div class="panel panel-default height">
+                        <div class="panel-heading">Shipping Address</div>
+                        <div class="panel-body">
+                            <strong>Somnath Saha:</strong><br>
+                            1111 Army Navy Colony<br>
+                            Shyambazar<br>
+                            Kolkata<br>
+                            <strong>22 203</strong><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="text-center"><strong>Order summary</strong></h3>
+                </div>
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table table-condensed">
+                            <thead>
+                                <tr>
+                                    <td><strong>Item Name</strong></td>
+                                    <td class="text-center"><strong>Item Price</strong></td>
+                                    <td class="text-center"><strong>Item Quantity</strong></td>
+                                    <td class="text-right"><strong>Total</strong></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Bed rent</td>
+                                    <td class="text-center">Rs.900</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-right">Rs.900</td>
+                                </tr>
+                                <tr>
+                                    <td>Medicine</td>
+                                    <td class="text-center">Rs.30.00</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-right">Rs.30.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Others</td>
+                                    <td class="text-center">Rs.7</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-right">Rs.28</td>
+                                </tr>
+                                <tr>
+                                    <td class="highrow"></td>
+                                    <td class="highrow"></td>
+                                    <td class="highrow text-center"><strong>Subtotal</strong></td>
+                                    <td class="highrow text-right">Rs.958.00</td>
+                                </tr>
+                                <tr>
+                                    <td class="emptyrow"></td>
+                                    <td class="emptyrow"></td>
+                                    <td class="emptyrow text-center"><strong>Shipping</strong></td>
+                                    <td class="emptyrow text-right">Rs.20</td>
+                                </tr>
+                                <tr>
+                                    <td class="emptyrow"><i class="fa fa-barcode iconbig"></i></td>
+                                    <td class="emptyrow"></td>
+                                    <td class="emptyrow text-center"><strong>Total</strong></td>
+                                    <td class="emptyrow text-right">Rs.978.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+   <div class="modal-footer">
+    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+   </div>
+  </div><!-- /.modal-content -->
+ </div><!-- /.modal-dialog -->
+</div>
+  
+<!--For Resources -->	  
+<div id="resourceModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+ <div class="modal-dialog">
+   <div class="modal-content">
+    <div class="modal-header">
+     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+     <h4 class="modal-title" id="doctorModalLabel">Resource Details</h4>
+    </div>
+    <div class="modal-body">
+     <ul id="doctorTab" class="nav nav-tabs nav-justified" role="tablist">
+      <li class="active"><a href="#showDoctor">Available Resources</a></li>
+	  <li><a href="#addNewDoctor">Add new</a></li>
+	  <li><a href="#printDoctor">Print</a></li>
+	  <li><a href="#deleteDoctor">Delete</a></li>
+	 </ul>
+	 <br>
+	<div id="doctorTabContent" class="tab-content"> 
+     <div id="showDoctor" class="tab-pane fade active in panel panel-primary">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Resource's details</div>
+      <div class="panel-body">
+        <p></p>
+      </div>
+      <!-- Table -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Total Count</th>
+            <th>Department</th>
+            <th>Available</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Dr.Suvash</td>
+            <td>Barasat</td>
+            <td>9830908765</td>
+            <td>General</td>
+            <td>2p.m-5p.m.</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Dr. Chetan</td>
+            <td>Chennai</td>
+            <td>9831908765</td>
+            <td>General</td>
+            <td>4p.m-5p.m.</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Dr.Majumder</td>
+            <td>Kokata</td>
+            <td>9830923655</td>
+            <td>General</td>
+            <td>Always</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+     <div id="addNewDoctor" class="tab-pane fade panel panel-info">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Doctor's details</div>
+      <div class="panel-body">
+        <p></p>
+      </div>
+      <form class="form-horizontal" role="form">
+			<div class="form-group">
+				<label for="inputEmail3" class="col-sm-4 control-label">Resource's Name</label>
+				<div class="col-sm-6">
+					<input type="name" class="form-control" id="resourceName" placeholder="Resource Name">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-4 control-label">Type</label>
+				<div class="col-sm-6">
+					<input type="name" class="form-control" id="resourceAddress" placeholder="Type">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-4 control-label">Total Count</label>
+				<div class="col-sm-6">
+					<input type="name" class="form-control" id="ResourceCount" placeholder="Ex:689">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-4 control-label">Department</label>
+				<div class="col-sm-6">
+					<input type="name" class="form-control" id="ResourceDepartment" placeholder="Department">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-4 control-label">Available</label>
+				<div class="col-sm-6">
+					<input type="name" class="form-control" id="ResourceAvailable" placeholder="Ex:234">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-4 col-sm-3">
+					<button type="submit" class="btn btn-info">Save and continue</button>
+				</div>
+			</div>
+		</form>
+     </div>
+     <div id="printDoctor" class="tab-pane fade panel panel-warning">
+             <!-- Default panel contents -->
+      <div class="panel-heading">Doctor's details</div>
+      <div class="panel-body">
+        <p class="text-right"><button type="button" class="btn btn-primary">Print</button></p>
+      </div>
+      <!-- Table -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone No.</th>
+            <th>Expertise</th>
+            <th>Duty Cycle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Dr.Suvash</td>
+            <td>Barasat</td>
+            <td>9830908765</td>
+            <td>General</td>
+            <td>2p.m-5p.m.</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Dr. Chetan</td>
+            <td>Chennai</td>
+            <td>9831908765</td>
+            <td>General</td>
+            <td>4p.m-5p.m.</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Dr.Majumder</td>
+            <td>Kokata</td>
+            <td>9830923655</td>
+            <td>General</td>
+            <td>Always</td>
+          </tr>
+        </tbody>
+      </table>
+     </div>
+     <div id="deleteDoctor" class="tab-pane fade panel panel-danger">
+                  <!-- Default panel contents -->
+      <div class="panel-heading">Doctor's details</div>
+      <div class="panel-body">
+        <p class="text-right"><button type="button" class="btn btn-primary">Delete</button></p>
+      </div>
+      <!-- Table -->
+      <table class="table">
+        <thead>
+          <tr>
+			<th><input type="checkbox">Select all</th>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone No.</th>
+            <th>Expertise</th>
+            <th>Duty Cycle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+			<td><input type="checkbox"></td>
+            <td>1</td>
+            <td>Dr.Suvash</td>
+            <td>Barasat</td>
+            <td>9830908765</td>
+            <td>General</td>
+            <td>2p.m-5p.m.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>2</td>
+            <td>Dr. Chetan</td>
+            <td>Chennai</td>
+            <td>9831908765</td>
+            <td>General</td>
+            <td>4p.m-5p.m.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>3</td>
+            <td>Dr.Majumder</td>
+            <td>Kokata</td>
+            <td>9830923655</td>
+            <td>General</td>
+            <td>Always</td>
+          </tr>
+        </tbody>
+      </table>  
+     </div>
+    </div>
+   </div>
+   <div class="modal-footer">
+    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+   </div>
+  </div><!-- /.modal-content -->
+ </div><!-- /.modal-dialog -->
+</div>
+  
+<!--For Instruments -->	  
+<div id="instrumentModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+ <div class="modal-dialog">
+   <div class="modal-content">
+    <div class="modal-header">
+     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+     <h4 class="modal-title" id="doctorModalLabel">Doctors</h4>
+    </div>
+    <div class="modal-body">
+     <ul id="doctorTab" class="nav nav-tabs nav-justified" role="tablist">
+      <li class="active"><a href="#showDoctor">Show Doctor</a></li>
+	  <li><a href="#addNewDoctor">Add new</a></li>
+	  <li><a href="#printDoctor">Print</a></li>
+	  <li><a href="#deleteDoctor">Delete</a></li>
+	 </ul>
+	 <br>
+	<div id="doctorTabContent" class="tab-content"> 
+     <div id="showDoctor" class="tab-pane fade active in panel panel-primary">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Doctor's details</div>
+      <div class="panel-body">
+        <p></p>
+      </div>
+      <!-- Table -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone No.</th>
+            <th>Expertise</th>
+            <th>Duty Cycle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Dr.Suvash</td>
+            <td>Barasat</td>
+            <td>9830908765</td>
+            <td>General</td>
+            <td>2p.m-5p.m.</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Dr. Chetan</td>
+            <td>Chennai</td>
+            <td>9831908765</td>
+            <td>General</td>
+            <td>4p.m-5p.m.</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Dr.Majumder</td>
+            <td>Kokata</td>
+            <td>9830923655</td>
+            <td>General</td>
+            <td>Always</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+     <div id="addNewDoctor" class="tab-pane fade panel panel-info">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Doctor's details</div>
+      <div class="panel-body">
+        <p></p>
+      </div>
+      <form class="form-horizontal" role="form">
+			<div class="form-group">
+				<label for="inputEmail3" class="col-sm-4 control-label">Doctor's Name</label>
+				<div class="col-sm-6">
+					<input type="name" class="form-control" id="doctorName" placeholder="DoctorName">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-4 control-label">Address</label>
+				<div class="col-sm-6">
+					<input type="name" class="form-control" id="doctorAddress" placeholder="Address">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-4 control-label">Phone number</label>
+				<div class="col-sm-6">
+					<input type="name" class="form-control" id="doctorPhone" placeholder="Ex:9932457689">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-4 control-label">Expertise</label>
+				<div class="col-sm-6">
+					<input type="name" class="form-control" id="doctorExpertise" placeholder="Expertise">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-4 control-label">Duty cycle</label>
+				<div class="col-sm-6">
+					<input type="name" class="form-control" id="doctorDutyCycle" placeholder="Duty cycle">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-4 col-sm-3">
+					<button type="submit" class="btn btn-info">Save and continue</button>
+				</div>
+			</div>
+		</form>
+     </div>
+     <div id="printDoctor" class="tab-pane fade panel panel-warning">
+             <!-- Default panel contents -->
+      <div class="panel-heading">Doctor's details</div>
+      <div class="panel-body">
+        <p class="text-right"><button type="button" class="btn btn-primary">Print</button></p>
+      </div>
+      <!-- Table -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone No.</th>
+            <th>Expertise</th>
+            <th>Duty Cycle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Dr.Suvash</td>
+            <td>Barasat</td>
+            <td>9830908765</td>
+            <td>General</td>
+            <td>2p.m-5p.m.</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Dr. Chetan</td>
+            <td>Chennai</td>
+            <td>9831908765</td>
+            <td>General</td>
+            <td>4p.m-5p.m.</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Dr.Majumder</td>
+            <td>Kokata</td>
+            <td>9830923655</td>
+            <td>General</td>
+            <td>Always</td>
+          </tr>
+        </tbody>
+      </table>
+     </div>
+     <div id="deleteDoctor" class="tab-pane fade panel panel-danger">
+                  <!-- Default panel contents -->
+      <div class="panel-heading">Doctor's details</div>
+      <div class="panel-body">
+        <p class="text-right"><button type="button" class="btn btn-primary">Delete</button></p>
+      </div>
+      <!-- Table -->
+      <table class="table">
+        <thead>
+          <tr>
+			<th><input type="checkbox">Select all</th>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone No.</th>
+            <th>Expertise</th>
+            <th>Duty Cycle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+			<td><input type="checkbox"></td>
+            <td>1</td>
+            <td>Dr.Suvash</td>
+            <td>Barasat</td>
+            <td>9830908765</td>
+            <td>General</td>
+            <td>2p.m-5p.m.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>2</td>
+            <td>Dr. Chetan</td>
+            <td>Chennai</td>
+            <td>9831908765</td>
+            <td>General</td>
+            <td>4p.m-5p.m.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>3</td>
+            <td>Dr.Majumder</td>
+            <td>Kokata</td>
+            <td>9830923655</td>
+            <td>General</td>
+            <td>Always</td>
+          </tr>
+        </tbody>
+      </table>  
+     </div>
+    </div>
+   </div>
+   <div class="modal-footer">
+    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+   </div>
+  </div><!-- /.modal-content -->
+ </div><!-- /.modal-dialog -->
+</div>
+  
+<!--For Settings -->	  
+<div id="settingsModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+ <div class="modal-dialog">
+   <div class="modal-content">
+    <div class="modal-header">
+     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+     <h4 class="modal-title" id="doctorModalLabel">Doctors</h4>
+    </div>
+    <div class="modal-body">
+		<i class="fa fa-spinner fa-spin"></i>
+		<i class="fa fa-circle-o-notch fa-spin"></i>
+		<i class="fa fa-refresh fa-spin"></i>
+		<i class="fa fa-cog fa-spin"></i>
+    </div>
+   <div class="modal-footer">
+    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+   </div>
+  </div><!-- /.modal-content -->
+ </div><!-- /.modal-dialog -->
+</div>
+  
+<!--For Print -->	  
+<div id="printModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+ <div class="modal-dialog">
+   <div class="modal-content">
+    <div class="modal-header">
+     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+     <h4 class="modal-title" id="doctorModalLabel">Print</h4>
+    </div>
+    <div class="modal-body">
+     <ul id="doctorTab" class="nav nav-pills nav-justified" role="tablist">
+      <li class="active"><a href="#showDoctor">Doctor's Details</a></li>
+	  <li><a href="#addNewDoctor">Patient Details</a></li>
+	  <li><a href="#printDoctor">Employee Details</a></li>
+	  <li><a href="#deleteDoctor">Invoice Details</a></li>
+	  <li><a href="#deleteDoctor">Resource Details</a></li>
+	 </ul>
+	 <br>
+	<div id="doctorTabContent" class="tab-content"> 
+     <div id="showDoctor" class="tab-pane fade active in panel panel-primary">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Doctor's details</div>
+      <div class="panel-body">
+        <p class="text-right"><button type="button" class="btn btn-primary">Print</button></p>
+      </div>
+      <!-- Table -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone No.</th>
+            <th>Expertise</th>
+            <th>Duty Cycle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Dr.Suvash</td>
+            <td>Barasat</td>
+            <td>9830908765</td>
+            <td>General</td>
+            <td>2p.m-5p.m.</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Dr. Chetan</td>
+            <td>Chennai</td>
+            <td>9831908765</td>
+            <td>General</td>
+            <td>4p.m-5p.m.</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Dr.Majumder</td>
+            <td>Kokata</td>
+            <td>9830923655</td>
+            <td>General</td>
+            <td>Always</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+     <div id="addNewDoctor" class="tab-pane fade panel panel-info">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Doctor's details</div>
+      <div class="panel-body">
+        <p class="text-right"><button type="button" class="btn btn-primary">Print</button></p>
+      </div>
+      <form class="form-horizontal" role="form">
+			<div class="form-group">
+				<label for="inputEmail3" class="col-sm-4 control-label">Doctor's Name</label>
+				<div class="col-sm-6">
+					<input type="name" class="form-control" id="doctorName" placeholder="DoctorName">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-4 control-label">Address</label>
+				<div class="col-sm-6">
+					<input type="name" class="form-control" id="doctorAddress" placeholder="Address">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-4 control-label">Phone number</label>
+				<div class="col-sm-6">
+					<input type="name" class="form-control" id="doctorPhone" placeholder="Ex:9932457689">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-4 control-label">Expertise</label>
+				<div class="col-sm-6">
+					<input type="name" class="form-control" id="doctorExpertise" placeholder="Expertise">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-4 control-label">Duty cycle</label>
+				<div class="col-sm-6">
+					<input type="name" class="form-control" id="doctorDutyCycle" placeholder="Duty cycle">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-4 col-sm-3">
+					<button type="submit" class="btn btn-info">Save and continue</button>
+				</div>
+			</div>
+		</form>
+     </div>
+     <div id="printDoctor" class="tab-pane fade panel panel-warning">
+             <!-- Default panel contents -->
+      <div class="panel-heading">Doctor's details</div>
+      <div class="panel-body">
+        <p class="text-right"><button type="button" class="btn btn-primary">Print</button></p>
+      </div>
+      <!-- Table -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone No.</th>
+            <th>Expertise</th>
+            <th>Duty Cycle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Dr.Suvash</td>
+            <td>Barasat</td>
+            <td>9830908765</td>
+            <td>General</td>
+            <td>2p.m-5p.m.</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Dr. Chetan</td>
+            <td>Chennai</td>
+            <td>9831908765</td>
+            <td>General</td>
+            <td>4p.m-5p.m.</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Dr.Majumder</td>
+            <td>Kokata</td>
+            <td>9830923655</td>
+            <td>General</td>
+            <td>Always</td>
+          </tr>
+        </tbody>
+      </table>
+     </div>
+     <div id="deleteDoctor" class="tab-pane fade panel panel-danger">
+                  <!-- Default panel contents -->
+      <div class="panel-heading">Doctor's details</div>
+      <div class="panel-body">
+        <p class="text-right"><button type="button" class="btn btn-primary">print</button></p>
+      </div>
+      <!-- Table -->
+      <table class="table">
+        <thead>
+          <tr>
+			<th><input type="checkbox">Select all</th>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone No.</th>
+            <th>Expertise</th>
+            <th>Duty Cycle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+			<td><input type="checkbox"></td>
+            <td>1</td>
+            <td>Dr.Suvash</td>
+            <td>Barasat</td>
+            <td>9830908765</td>
+            <td>General</td>
+            <td>2p.m-5p.m.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>2</td>
+            <td>Dr. Chetan</td>
+            <td>Chennai</td>
+            <td>9831908765</td>
+            <td>General</td>
+            <td>4p.m-5p.m.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>3</td>
+            <td>Dr.Majumder</td>
+            <td>Kokata</td>
+            <td>9830923655</td>
+            <td>General</td>
+            <td>Always</td>
+          </tr>
+        </tbody>
+      </table>  
+     </div>
+    </div>
+   </div>
+   <div class="modal-footer">
+    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+   </div>
+  </div><!-- /.modal-content -->
+ </div><!-- /.modal-dialog -->
+</div>
+  
+<!--For Registration -->	  
+<div id="registrationModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+ <div class="modal-dialog">
+   <div class="modal-content">
+    <div class="modal-header">
+     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+     <h4 class="modal-title" id="doctorModalLabel">Doctors</h4>
+    </div>
+    <div class="modal-body">
+     <div id="showDoctor" class="tab-pane fade active in panel panel-primary">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Registration form</div>
+      <div class="panel-body">
+        <form class="form-horizontal" role="form">
+			<div class="form-group">
+				<label for="inputEmail3" class="col-sm-4 control-label">Patient Name</label>
+				<div class="col-sm-6">
+					<input type="name" class="form-control" id="doctorName" placeholder="DoctorName">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-4 control-label">Address</label>
+				<div class="col-sm-6">
+					<input type="name" class="form-control" id="doctorAddress" placeholder="Address">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-4 control-label">Phone number</label>
+				<div class="col-sm-6">
+					<input type="name" class="form-control" id="doctorPhone" placeholder="Ex:9932457689">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-4 control-label">Expertise</label>
+				<div class="col-sm-6">
+					<input type="name" class="form-control" id="doctorExpertise" placeholder="Expertise">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-4 control-label">Duty cycle</label>
+				<div class="col-sm-6">
+					<input type="name" class="form-control" id="doctorDutyCycle" placeholder="Duty cycle">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-4 col-sm-3">
+					<button type="submit" class="btn btn-info">Save and continue</button>
+				</div>
+			</div>
+		</form>
+      </div>
+      </div>
+   </div>
+   <div class="modal-footer">
+    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+   </div>
+  </div><!-- /.modal-content -->
+ </div><!-- /.modal-dialog -->
+</div>
+  
+  
+      <div class="mastfoot">
+       <div class="inner">
+        <p>All copyrights reserved by <a href="http://www.technicise.com">Technicise.com</a>.</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <script src="Assets/javascripts/jquery.min.js" type="text/javascript"></script>
+   <script src="Assets/javascripts/bootstrap.min.js" type="text/javascript"></script>
+   <script src="Assets/javascripts/hello.js" type="text/javascript"></script>
+  </body>
+</html>
