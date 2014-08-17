@@ -1,6 +1,0 @@
-INDEX VERSION 1.122+D:\development\technicise\hms\java-webservice\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-1778516608.index
-356948737.index
-3015296217.index
-2040799210.index
-2905682215.index
