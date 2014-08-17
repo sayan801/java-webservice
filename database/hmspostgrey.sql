@@ -16,6 +16,18 @@ WITH (
   OIDS=FALSE
 );
 
+-- Sequence: seq_doctors
+
+-- DROP SEQUENCE seq_doctors;
+
+CREATE SEQUENCE seq_doctors
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 9223372036854775807
+  START 1
+  CACHE 1;
+
+
 -- Table: patients
 
 -- DROP TABLE patients;
@@ -33,3 +45,14 @@ CREATE TABLE patients
 WITH (
   OIDS=FALSE
 );
+
+-- Sequence: seq_patients
+
+-- DROP SEQUENCE seq_patients;
+
+CREATE SEQUENCE seq_patients
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 9223372036854775807
+  START 1
+  CACHE 1;

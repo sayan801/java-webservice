@@ -1,0 +1,71 @@
+!SESSION 2014-08-17 18:58:10.935 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jpt.jpa.gen 4 0 2014-08-17 23:45:22.694
+!MESSAGE Unable to find JPA entities generation templates in pluginorg.eclipse.jpt.jpa.gen
+!STACK 1
+org.eclipse.core.runtime.CoreException: Unable to find JPA entities generation templates in pluginorg.eclipse.jpt.jpa.gen
+	at org.eclipse.jpt.jpa.gen.internal.PackageGenerator.generateClass(PackageGenerator.java:245)
+	at org.eclipse.jpt.jpa.gen.internal.PackageGenerator.generateInternal(PackageGenerator.java:112)
+	at org.eclipse.jpt.jpa.gen.internal.PackageGenerator.doGenerate(PackageGenerator.java:90)
+	at org.eclipse.jpt.jpa.gen.internal.PackageGenerator.generate(PackageGenerator.java:67)
+	at org.eclipse.jpt.jpa.ui.internal.wizards.gen.GenerateEntitiesFromSchemaWizard$GenerateEntitiesJob.runInWorkspace(GenerateEntitiesFromSchemaWizard.java:248)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.Exception: The class com.hms.org.Patient does not exist.
+	at org.eclipse.jpt.jpa.gen.internal.util.CompilationUnitModifier.<init>(CompilationUnitModifier.java:51)
+	at org.eclipse.jpt.jpa.gen.internal.PackageGenerator.updateExistingDomainClass(PackageGenerator.java:287)
+	at org.eclipse.jpt.jpa.gen.internal.PackageGenerator.generateJavaFile(PackageGenerator.java:262)
+	at org.eclipse.jpt.jpa.gen.internal.PackageGenerator.generateClass(PackageGenerator.java:233)
+	... 6 more
+!SUBENTRY 1 org.eclipse.jpt.jpa.gen 4 0 2014-08-17 23:45:22.696
+!MESSAGE Unable to find JPA entities generation templates in pluginorg.eclipse.jpt.jpa.gen
+!STACK 0
+java.lang.Exception: The class com.hms.org.Patient does not exist.
+	at org.eclipse.jpt.jpa.gen.internal.util.CompilationUnitModifier.<init>(CompilationUnitModifier.java:51)
+	at org.eclipse.jpt.jpa.gen.internal.PackageGenerator.updateExistingDomainClass(PackageGenerator.java:287)
+	at org.eclipse.jpt.jpa.gen.internal.PackageGenerator.generateJavaFile(PackageGenerator.java:262)
+	at org.eclipse.jpt.jpa.gen.internal.PackageGenerator.generateClass(PackageGenerator.java:233)
+	at org.eclipse.jpt.jpa.gen.internal.PackageGenerator.generateInternal(PackageGenerator.java:112)
+	at org.eclipse.jpt.jpa.gen.internal.PackageGenerator.doGenerate(PackageGenerator.java:90)
+	at org.eclipse.jpt.jpa.gen.internal.PackageGenerator.generate(PackageGenerator.java:67)
+	at org.eclipse.jpt.jpa.ui.internal.wizards.gen.GenerateEntitiesFromSchemaWizard$GenerateEntitiesJob.runInWorkspace(GenerateEntitiesFromSchemaWizard.java:248)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.jpt.jpa.gen 4 0 2014-08-17 23:58:06.301
+!MESSAGE Unable to find JPA entities generation templates in pluginorg.eclipse.jpt.jpa.gen
+!STACK 1
+org.eclipse.core.runtime.CoreException: Unable to find JPA entities generation templates in pluginorg.eclipse.jpt.jpa.gen
+	at org.eclipse.jpt.jpa.gen.internal.PackageGenerator.generateClass(PackageGenerator.java:245)
+	at org.eclipse.jpt.jpa.gen.internal.PackageGenerator.generateInternal(PackageGenerator.java:112)
+	at org.eclipse.jpt.jpa.gen.internal.PackageGenerator.doGenerate(PackageGenerator.java:90)
+	at org.eclipse.jpt.jpa.gen.internal.PackageGenerator.generate(PackageGenerator.java:67)
+	at org.eclipse.jpt.jpa.ui.internal.wizards.gen.GenerateEntitiesFromSchemaWizard$GenerateEntitiesJob.runInWorkspace(GenerateEntitiesFromSchemaWizard.java:248)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.Exception: The class com.hms.org.Patient does not exist.
+	at org.eclipse.jpt.jpa.gen.internal.util.CompilationUnitModifier.<init>(CompilationUnitModifier.java:51)
+	at org.eclipse.jpt.jpa.gen.internal.PackageGenerator.updateExistingDomainClass(PackageGenerator.java:287)
+	at org.eclipse.jpt.jpa.gen.internal.PackageGenerator.generateJavaFile(PackageGenerator.java:262)
+	at org.eclipse.jpt.jpa.gen.internal.PackageGenerator.generateClass(PackageGenerator.java:233)
+	... 6 more
+!SUBENTRY 1 org.eclipse.jpt.jpa.gen 4 0 2014-08-17 23:58:06.302
+!MESSAGE Unable to find JPA entities generation templates in pluginorg.eclipse.jpt.jpa.gen
+!STACK 0
+java.lang.Exception: The class com.hms.org.Patient does not exist.
+	at org.eclipse.jpt.jpa.gen.internal.util.CompilationUnitModifier.<init>(CompilationUnitModifier.java:51)
+	at org.eclipse.jpt.jpa.gen.internal.PackageGenerator.updateExistingDomainClass(PackageGenerator.java:287)
+	at org.eclipse.jpt.jpa.gen.internal.PackageGenerator.generateJavaFile(PackageGenerator.java:262)
+	at org.eclipse.jpt.jpa.gen.internal.PackageGenerator.generateClass(PackageGenerator.java:233)
+	at org.eclipse.jpt.jpa.gen.internal.PackageGenerator.generateInternal(PackageGenerator.java:112)
+	at org.eclipse.jpt.jpa.gen.internal.PackageGenerator.doGenerate(PackageGenerator.java:90)
+	at org.eclipse.jpt.jpa.gen.internal.PackageGenerator.generate(PackageGenerator.java:67)
+	at org.eclipse.jpt.jpa.ui.internal.wizards.gen.GenerateEntitiesFromSchemaWizard$GenerateEntitiesJob.runInWorkspace(GenerateEntitiesFromSchemaWizard.java:248)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
