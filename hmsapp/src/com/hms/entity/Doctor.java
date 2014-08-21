@@ -1,4 +1,4 @@
-package com.hms.model;
+package com.hms.entity;
 
 import java.io.Serializable;
 import javax.persistence.*;

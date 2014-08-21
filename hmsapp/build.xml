@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="hms" default="build-ear">
+	<property environment="env" />
+	<property file="build.properties" />
+	
+	<fileset id="hibernate.lib" dir="${hibernate.lib}">
+			<include name="*.jar" />
+		</fileset>
+	
+	<target name="clear">
+				<delete dir="${dst.dir}/${classes.dir}" />
+		<delete dir="${build.dir}" />
+	</target>
+
+	<target name="build">
+		<mkdir dir="${dst.dir}/${classes.dir}" />
+		<javac srcdir="${src.dir}" destdir="${dst.dir}/${classes.dir}" debug="on" debuglevel="lines,vars,source" fork="true" includeantruntime="true">
+			<classpath>
+				
+				<fileset refid="hibernate.lib" />
+				
+			</classpath>
+		</javac>
+		<copy todir="${dst.dir}/${classes.dir}">
+			<fileset dir="${src.dir}" excludes="${build.exclude.file.list}" />
+		</copy>
+	</target>
+
+	<target name="build-war" depends="clear,build">
+		<mkdir dir="${build.dir}" />
+		<tstamp>
+			<format property="time.now" pattern="MM-dd-yyyy hh:mma" />
+		</tstamp>
+		<echo message="Creating WAR... at ${time.now}" />
+		<war basedir="${dst.dir}" warfile="${build.dir}/${context.path}.war" webxml="${dst.dir}/${web.xml.path}" excludes="${build.exclude.file.list}">
+		
+		</war>
+	</target>
+
+	<target name="build-ear" depends="build-war">
+		<tstamp>
+			<format property="time.now" pattern="MM-dd-yyyy hh:mma" />
+		</tstamp>
+		<echo message="Creating EAR... at ${time.now}" />
+		<ear basedir="${build.dir}" appxml="${dst.dir}/${app.xml.path}" earfile="${build.dir}/${context.path}.ear" excludes="${build.exclude.file.list}">
+			
+		</ear>
+		<delete file="${build.dir}/${context.path}.war" />
+	</target>
+
+
+
+</project>
