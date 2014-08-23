@@ -1,24 +1,19 @@
 package com.hms.dao.Impl;
 
-import com.hms.dao.ProviderDAO;
-import com.hms.entity.Doctor;
-import com.hms.model.DoctorInfo;
-import com.hms.model.Response;
-
-import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.criterion.CriteriaSpecification;
-import org.hibernate.criterion.Projections;
-import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+
+import com.hms.dao.ProviderDAO;
+import com.hms.entity.Doctor;
+import com.hms.model.Response;
+
 
 @Repository
 @Transactional
@@ -129,6 +124,25 @@ public class ProviderDAOImpl implements ProviderDAO {
 		return doctorList;
 	}
 	
+
+	@SuppressWarnings("unchecked")
+	@Override
+	@Transactional(readOnly=true,propagation=Propagation.REQUIRED)
+	public Doctor getDoctorByID(Doctor doc) {
+	
+		Doctor docEntity=null;
+		//List<Doctor> doctorList = null;
+		
+		try {
+			session = sessionFactory.getCurrentSession();
+			docEntity=	(Doctor) session.load(Doctor.class, doc.getIddoctors());	
+			
+			System.out.println("inside getDoctorByID in DAO impl " + docEntity.getName());
+		} catch (Exception e) {
+			
+		}
+		return docEntity;
+	}
 	
 
 

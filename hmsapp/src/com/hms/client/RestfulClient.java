@@ -17,20 +17,19 @@ public class RestfulClient {
 	public void invokeClient(){
 		
 		DoctorInfo doc= new DoctorInfo();
-		doc.setIddoctors(250);
+		doc.setIddoctors(300);
 		doc.setAddress("Govind Address");
 		doc.setContactNumber("9611125680");
 		doc.setName("Govind Reddy");
 		try{
 		Client client = Client.create();
-		WebResource webResource = client.resource("http://localhost:8080/hmsapp/hms/findDoctorByAttributes");
+		WebResource webResource = client.resource("http://localhost:8080/hmsapp/hms/findDoctorByID");
 		ClientResponse response = webResource.accept(MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON).post(ClientResponse.class, doc);
-			Response serviceResponse = response.getEntity(Response.class);
-			if(serviceResponse != null){
-				
-				System.out.println(serviceResponse.getDoctorInfoList().size());
 		
-		}
+		DoctorInfo  doc1 = response.getEntity(DoctorInfo.class);
+		
+		System.out.println("Name" + doc1.getName());
+			
 }catch (Exception e) {
 	// TODO: handle exception
 	e.printStackTrace();
@@ -43,12 +42,73 @@ public class RestfulClient {
 	public static void main(String[] args) {
 		RestfulClient client= new RestfulClient();
 		try {
-			client.invokeClient();
+			client.findDoctorByID();
+			//client.addOrUpdateDoctor();
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
 		}
 		
 		
+	}
+
+
+
+	private void addOrUpdateDoctor() {
+
+		
+		DoctorInfo doc= new DoctorInfo();
+		//doc.setIddoctors(300);
+		doc.setAddress("Govind Address");
+		doc.setContactNumber("9611125680");
+		doc.setName("Govind Reddy");
+		try{
+		Client client = Client.create();
+		WebResource webResource = client.resource("http://localhost:8080/hmsapp/hms/addOrUpdateDoctor");
+		ClientResponse response = webResource.accept(MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON).post(ClientResponse.class, doc);
+		
+			Response serviceResponse = response.getEntity(Response.class);
+			if(serviceResponse != null){
+				
+				System.out.println(serviceResponse.getStatus());
+		
+		}
+}catch (Exception e) {
+	// TODO: handle exception
+	e.printStackTrace();
+}
+			
+	
+		
+	}
+
+
+
+	private void findDoctorByID() {
+		
+		DoctorInfo doc= new DoctorInfo();
+		doc.setIddoctors(300);
+		doc.setAddress("Govind Address");
+		doc.setContactNumber("9611125680");
+		doc.setName("Govind Reddy");
+		try{
+		Client client = Client.create();
+		WebResource webResource = client.resource("http://localhost:8080/hmsapp/hms/findDoctorByID");
+		ClientResponse response = webResource.accept(MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON).post(ClientResponse.class, doc);
+		
+		DoctorInfo  doc1 = response.getEntity(DoctorInfo.class);
+		
+		System.out.println("Name" + doc1.getName());
+			/*Response serviceResponse = response.getEntity(Response.class);
+			if(serviceResponse != null){
+				
+				System.out.println(serviceResponse.getDoctorInfoList().size());
+		
+		}*/
+}catch (Exception e) {
+	// TODO: handle exception
+	e.printStackTrace();
+}
+			
 	}
 	}

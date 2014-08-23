@@ -6,7 +6,6 @@ package com.hms.service.impl;
 
 import java.util.List;
 
-import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -16,6 +15,7 @@ import com.hms.mapper.ProviderRequestResponseMapper;
 import com.hms.model.DoctorInfo;
 import com.hms.model.Response;
 import com.hms.service.ProviderService;
+
 
 /**
  * @author govind
@@ -58,6 +58,13 @@ public class ProviderServiceImpl implements ProviderService {
 	@Override
 	public Response deleteDoctor(DoctorInfo doctorInfo) {
 		return providerDAO.deleteDoctor(providerRequestResponseMapper.getDoctorEntity(doctorInfo));
+	}
+
+	@Override
+	public DoctorInfo getDoctorByID(DoctorInfo doctorInfo) {
+		// TODO Auto-generated method stub
+		Doctor doc = providerDAO.getDoctorByID(providerRequestResponseMapper.getDoctorEntity(doctorInfo));
+		return providerRequestResponseMapper.getDoctorInfoFromEntity(doc);
 	}
 
 }

@@ -60,13 +60,28 @@ public class ProviderController {
 	}
 	
 
-	@RequestMapping(value = "/findDoctorByAttributes" , method = RequestMethod.POST)
-	public @ResponseBody Response findPatientByAttributes(@RequestBody DoctorInfo doctorInfo){
-	
+	@RequestMapping(value = "/findDoctorByAttributes" , method = RequestMethod.POST,headers="Accept=application/json,application/xml")
+	public @ResponseBody Response findDoctorstByAttributes(@RequestBody DoctorInfo doctorInfo){
+		System.out.println("inside findDoctorByAttributes method ");
 		Response response=null;
 		try {
 			
 			response = providerService.getDoctorsByAttributes(doctorInfo);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return response;
+	}
+
+	
+
+	@RequestMapping(value = "/findDoctorByID" , method = RequestMethod.POST,headers="Accept=application/json,application/xml")
+	public @ResponseBody DoctorInfo findDoctorByID(@RequestBody DoctorInfo doctorInfo){
+		System.out.println("inside findDoctorByID method ");
+		DoctorInfo response=null;
+		try {
+			
+			response = providerService.getDoctorByID(doctorInfo);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

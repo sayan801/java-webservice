@@ -21,4 +21,6 @@ public Response deleteDoctor(DoctorInfo doctorInfo);
 
 public	 Response getDoctorsByAttributes(DoctorInfo doctorInfo);
 
+public DoctorInfo getDoctorByID(DoctorInfo doctorInfo);
+
 }

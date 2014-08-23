@@ -6,6 +6,8 @@ import org.springframework.stereotype.Component;
 
 import com.hms.entity.Doctor;
 import com.hms.model.Response;
+
+;
 /**
  * @author govind
  *
@@ -19,6 +21,8 @@ public	  Response addDoctor(Doctor doc);
 //public Response updateDoctor(Doctor doc) ;
 
 public Response deleteDoctor(Doctor doc);
+
+public Doctor getDoctorByID(Doctor doc) ;
 
 public	 List<Doctor>  getDoctorsByAttributes(Doctor doc);
 
