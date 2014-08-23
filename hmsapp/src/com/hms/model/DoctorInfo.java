@@ -2,7 +2,6 @@ package com.hms.model;
 
 import java.io.Serializable;
 
-import javax.persistence.Column;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import org.springframework.stereotype.Component;
@@ -14,7 +13,14 @@ import org.springframework.stereotype.Component;
 public class DoctorInfo implements Serializable{
 	
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	private String address;
+	
+	private Integer iddoctors;
 
 	private String contactNumber;
 
@@ -74,6 +80,16 @@ public class DoctorInfo implements Serializable{
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+
+	public Integer getIddoctors() {
+		return iddoctors;
+	}
+
+
+	public void setIddoctors(Integer iddoctors) {
+		this.iddoctors = iddoctors;
 	}
 
 }

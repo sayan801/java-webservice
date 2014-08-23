@@ -20,6 +20,7 @@ public class ProviderRequestResponseMapper {
 	
 	public Doctor getDoctorEntity(DoctorInfo doctorInfo){
 			Doctor doc =new Doctor();
+			doc.setIddoctors(doctorInfo.getIddoctors());
 			doc.setAddress(doctorInfo.getAddress());
 			doc.setContactNumber(doctorInfo.getContactNumber());
 			doc.setDoctorRegNumber(doctorInfo.getDoctorRegNumber());
@@ -51,6 +52,7 @@ public class ProviderRequestResponseMapper {
 		doctorInfo.setDoctorRegNumber(doc.getDoctorRegNumber());
 		doctorInfo.setDoctorSpecialty(doc.getDoctorSpecialty());
 		doctorInfo.setName(doc.getName());
+		doctorInfo.setIddoctors(doc.getIddoctors());
 		return doctorInfo;
 	}
 

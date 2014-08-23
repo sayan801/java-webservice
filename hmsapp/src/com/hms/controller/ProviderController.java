@@ -5,12 +5,6 @@ package com.hms.controller;
 
 
 
-import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
-import java.util.List;
-
-
-import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -34,9 +28,9 @@ public class ProviderController {
 	@Autowired
 	ProviderService providerService;
 
-	@RequestMapping(value="/addDoctor", method = RequestMethod.POST ,headers="Accept=application/xml")
+	@RequestMapping(value="/addOrUpdateDoctor", method = RequestMethod.POST ,headers="Accept=application/json,application/xml")
 	public  @ResponseBody Response addDoctor(@RequestBody DoctorInfo doctorInfo){
-	
+	System.out.println("inside addOrUpdateDoctor method ");
 		Response response=null;
 		try {
 			
@@ -44,7 +38,23 @@ public class ProviderController {
 		
 		} catch (Exception e) {
 			
+			e.printStackTrace();
+		}
+		return response;
+	}
+	
+	
+	@RequestMapping(value="/deleteDoctor", method = RequestMethod.POST ,headers="Accept=application/json,application/xml")
+	public  @ResponseBody Response deleteDoctor(@RequestBody DoctorInfo doctorInfo){
+	System.out.println("inside deleteDoctor method ");
+		Response response=null;
+		try {
 			
+			response = providerService.deleteDoctor(doctorInfo);
+		
+		} catch (Exception e) {
+			
+			e.printStackTrace();
 		}
 		return response;
 	}
@@ -58,7 +68,7 @@ public class ProviderController {
 			
 			response = providerService.getDoctorsByAttributes(doctorInfo);
 		} catch (Exception e) {
-			
+			e.printStackTrace();
 		}
 		return response;
 	}

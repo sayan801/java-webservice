@@ -14,7 +14,11 @@ import com.hms.model.Response;
 public interface ProviderDAO {
 
 	
-public	 Response addDoctor(Doctor doc);
+public	  Response addDoctor(Doctor doc);
+
+//public Response updateDoctor(Doctor doc) ;
+
+public Response deleteDoctor(Doctor doc);
 
 public	 List<Doctor>  getDoctorsByAttributes(Doctor doc);
 

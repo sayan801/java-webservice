@@ -55,4 +55,9 @@ public class ProviderServiceImpl implements ProviderService {
 		return response;
 	}
 
+	@Override
+	public Response deleteDoctor(DoctorInfo doctorInfo) {
+		return providerDAO.deleteDoctor(providerRequestResponseMapper.getDoctorEntity(doctorInfo));
+	}
+
 }

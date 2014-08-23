@@ -8,6 +8,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import org.springframework.stereotype.Component;
@@ -18,9 +20,20 @@ import org.springframework.stereotype.Component;
  */
 @XmlRootElement
 @Component
+@XmlAccessorType(XmlAccessType.PROPERTY)
 public class Response implements Serializable{
 	
+	public Response(){
+		
+	}
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	private String code;
+	
 	private String status;
 	
 	private List<PatientInfo> patientInfoList = new ArrayList<PatientInfo>();

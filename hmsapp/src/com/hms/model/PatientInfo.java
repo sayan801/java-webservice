@@ -6,11 +6,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import org.springframework.stereotype.Component;
 
-@XmlRootElement (name = "patientInfo")
+@XmlRootElement (name = "PatientInfo")
 @Component
 public class PatientInfo implements Serializable{
 
 	
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	private String address;
 
