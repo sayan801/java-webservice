@@ -1,0 +1,130 @@
+16:17:47,973 INFO  [org.jboss.as.configadmin] (ServerService Thread Pool -- 26) JBAS016200: Activating ConfigAdmin Subsystem
+16:17:48,014 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 31) JBAS010280: Activating Infinispan subsystem.
+16:17:48,085 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 44) JBAS013101: Activating Security Subsystem
+16:17:48,107 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 38) JBAS011800: Activating Naming Subsystem
+16:17:48,103 INFO  [org.jboss.as.osgi] (ServerService Thread Pool -- 39) JBAS011940: Activating OSGi Subsystem
+16:17:48,144 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 48) JBAS015537: Activating WebServices Extension
+16:17:48,171 INFO  [org.jboss.as.connector] (MSC service thread 1-1) JBAS010408: Starting JCA Subsystem (JBoss IronJacamar 1.0.9.Final)
+16:17:48,275 INFO  [org.jboss.as.security] (MSC service thread 1-1) JBAS013100: Current PicketBox version=4.0.7.Final
+16:17:48,353 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 27) JBAS010403: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+16:17:48,743 INFO  [org.jboss.as.naming] (MSC service thread 1-2) JBAS011802: Starting Naming Service
+16:17:48,914 INFO  [org.jboss.ws.common.management.AbstractServerConfig] (MSC service thread 1-1) JBoss Web Services - Stack CXF Server 4.0.2.GA
+16:17:49,236 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-2) JBAS015400: Bound mail session [java:jboss/mail/Default]
+16:17:49,279 INFO  [org.apache.coyote.http11.Http11Protocol] (MSC service thread 1-1) Starting Coyote HTTP/1.1 on http--128.199.255.162-8080
+16:17:49,779 INFO  [org.jboss.as.remoting] (MSC service thread 1-1) JBAS017100: Listening on /128.199.255.162:9999
+16:17:49,862 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-2) JBAS015012: Started FileSystemDeploymentService for directory /usr/local/share/jboss/standalone/deployments
+16:17:49,944 INFO  [org.jboss.as.remoting] (MSC service thread 1-1) JBAS017100: Listening on /128.199.255.162:4447
+16:17:50,023 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-2) JBAS010400: Bound data source [java:jboss/datasources/ExampleDS]
+16:17:50,050 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015951: Admin console listening on http://128.199.255.162:9990
+16:17:50,051 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015874: JBoss AS 7.1.1.Final "Brontes" started in 4968ms - Started 133 of 208 services (74 services are passive or on-demand)
+17:08:17,045 INFO  [org.jboss.as.configadmin] (ServerService Thread Pool -- 26) JBAS016200: Activating ConfigAdmin Subsystem
+17:08:17,071 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 31) JBAS010280: Activating Infinispan subsystem.
+17:08:17,115 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 44) JBAS013101: Activating Security Subsystem
+17:08:17,124 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 38) JBAS011800: Activating Naming Subsystem
+17:08:17,123 INFO  [org.jboss.as.osgi] (ServerService Thread Pool -- 39) JBAS011940: Activating OSGi Subsystem
+17:08:17,164 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 48) JBAS015537: Activating WebServices Extension
+17:08:17,230 INFO  [org.jboss.as.security] (MSC service thread 1-2) JBAS013100: Current PicketBox version=4.0.7.Final
+17:08:17,540 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 27) JBAS010404: Deploying non-JDBC-compliant driver class org.postgresql.Driver (version 9.3)
+17:08:17,708 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 27) JBAS010403: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+17:08:17,744 INFO  [org.jboss.as.connector] (MSC service thread 1-1) JBAS010408: Starting JCA Subsystem (JBoss IronJacamar 1.0.9.Final)
+17:08:17,762 INFO  [org.jboss.as.naming] (MSC service thread 1-1) JBAS011802: Starting Naming Service
+17:08:17,840 INFO  [org.jboss.ws.common.management.AbstractServerConfig] (MSC service thread 1-2) JBoss Web Services - Stack CXF Server 4.0.2.GA
+17:08:18,015 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-2) JBAS015400: Bound mail session [java:jboss/mail/Default]
+17:08:18,087 ERROR [org.apache.coyote.http11.Http11Protocol] (MSC service thread 1-1) Error initializing endpoint: java.net.BindException: Address already in use /128.199.255.162:8080
+	at org.apache.tomcat.util.net.JIoEndpoint.init(JIoEndpoint.java:983) [jbossweb-7.0.13.Final.jar:]
+	at org.apache.coyote.http11.Http11Protocol.init(Http11Protocol.java:190) [jbossweb-7.0.13.Final.jar:]
+	at org.apache.catalina.connector.Connector.init(Connector.java:983) [jbossweb-7.0.13.Final.jar:]
+	at org.jboss.as.web.WebConnectorService.start(WebConnectorService.java:267) [jboss-as-web-7.1.1.Final.jar:7.1.1.Final]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_55]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_55]
+	at java.lang.Thread.run(Thread.java:744) [rt.jar:1.7.0_55]
+
+17:08:18,152 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-1) MSC00001: Failed to start service jboss.web.connector.http: org.jboss.msc.service.StartException in service jboss.web.connector.http: JBAS018007: Error starting web connector
+	at org.jboss.as.web.WebConnectorService.start(WebConnectorService.java:271)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_55]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_55]
+	at java.lang.Thread.run(Thread.java:744) [rt.jar:1.7.0_55]
+Caused by: LifecycleException:  Protocol handler initialization failed: java.net.BindException: Address already in use /128.199.255.162:8080
+	at org.apache.catalina.connector.Connector.init(Connector.java:985)
+	at org.jboss.as.web.WebConnectorService.start(WebConnectorService.java:267)
+	... 5 more
+
+17:08:18,869 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-1) MSC00001: Failed to start service jboss.serverManagement.controller.management.http: org.jboss.msc.service.StartException in service jboss.serverManagement.controller.management.http: Address already in use /128.199.255.162:9990
+	at org.jboss.as.server.mgmt.HttpManagementService.start(HttpManagementService.java:210) [jboss-as-server-7.1.1.Final.jar:7.1.1.Final]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_55]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_55]
+	at java.lang.Thread.run(Thread.java:744) [rt.jar:1.7.0_55]
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method) [rt.jar:1.7.0_55]
+	at sun.nio.ch.Net.bind(Net.java:444) [rt.jar:1.7.0_55]
+	at sun.nio.ch.Net.bind(Net.java:436) [rt.jar:1.7.0_55]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214) [rt.jar:1.7.0_55]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) [rt.jar:1.7.0_55]
+	at org.jboss.sun.net.httpserver.ServerImpl.<init>(ServerImpl.java:144)
+	at org.jboss.sun.net.httpserver.HttpServerImpl.<init>(HttpServerImpl.java:54)
+	at org.jboss.sun.net.httpserver.DefaultHttpServerProvider.createHttpServer(DefaultHttpServerProvider.java:38)
+	at org.jboss.com.sun.net.httpserver.HttpServer.create(HttpServer.java:147)
+	at org.jboss.as.domain.http.server.ManagementHttpServer.create(ManagementHttpServer.java:145)
+	at org.jboss.as.server.mgmt.HttpManagementService.start(HttpManagementService.java:177) [jboss-as-server-7.1.1.Final.jar:7.1.1.Final]
+	... 5 more
+
+17:08:18,892 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-2) MSC00001: Failed to start service jboss.remoting.server.management: org.jboss.msc.service.StartException in service jboss.remoting.server.management: JBAS017112: Address already in use /128.199.255.162:9999
+	at org.jboss.as.remoting.AbstractStreamServerService.start(AbstractStreamServerService.java:109)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_55]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_55]
+	at java.lang.Thread.run(Thread.java:744) [rt.jar:1.7.0_55]
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method) [rt.jar:1.7.0_55]
+	at sun.nio.ch.Net.bind(Net.java:444) [rt.jar:1.7.0_55]
+	at sun.nio.ch.Net.bind(Net.java:436) [rt.jar:1.7.0_55]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214) [rt.jar:1.7.0_55]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) [rt.jar:1.7.0_55]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:67) [rt.jar:1.7.0_55]
+	at org.xnio.nio.NioXnioWorker.createTcpServer(NioXnioWorker.java:287)
+	at org.xnio.XnioWorker.createStreamServer(XnioWorker.java:135)
+	at org.jboss.remoting3.remote.RemoteConnectionProvider$ProviderInterface.createServer(RemoteConnectionProvider.java:209)
+	at org.jboss.as.remoting.AbstractStreamServerService.start(AbstractStreamServerService.java:101)
+	... 5 more
+
+17:08:18,946 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-1) JBAS015012: Started FileSystemDeploymentService for directory /usr/local/share/jboss/standalone/deployments
+17:08:18,954 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-1) MSC00001: Failed to start service jboss.remoting.server.remoting-connector: org.jboss.msc.service.StartException in service jboss.remoting.server.remoting-connector: JBAS017112: Address already in use /128.199.255.162:4447
+	at org.jboss.as.remoting.AbstractStreamServerService.start(AbstractStreamServerService.java:109)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_55]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_55]
+	at java.lang.Thread.run(Thread.java:744) [rt.jar:1.7.0_55]
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method) [rt.jar:1.7.0_55]
+	at sun.nio.ch.Net.bind(Net.java:444) [rt.jar:1.7.0_55]
+	at sun.nio.ch.Net.bind(Net.java:436) [rt.jar:1.7.0_55]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214) [rt.jar:1.7.0_55]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) [rt.jar:1.7.0_55]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:67) [rt.jar:1.7.0_55]
+	at org.xnio.nio.NioXnioWorker.createTcpServer(NioXnioWorker.java:287)
+	at org.xnio.XnioWorker.createStreamServer(XnioWorker.java:135)
+	at org.jboss.remoting3.remote.RemoteConnectionProvider$ProviderInterface.createServer(RemoteConnectionProvider.java:209)
+	at org.jboss.as.remoting.AbstractStreamServerService.start(AbstractStreamServerService.java:101)
+	... 5 more
+
+17:08:19,089 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-2) JBAS010400: Bound data source [java:jboss/datasources/ExampleDS]
+17:08:19,091 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-2) JBAS010400: Bound data source [java:jboss/datasources/JavaWebserviceTest]
+17:08:19,544 INFO  [org.jboss.as.controller] (Controller Boot Thread) JBAS014774: Service status report
+JBAS014777:   Services which failed to start:      service jboss.remoting.server.management: org.jboss.msc.service.StartException in service jboss.remoting.server.management: JBAS017112: Address already in use /128.199.255.162:9999
+      service jboss.web.connector.http: org.jboss.msc.service.StartException in service jboss.web.connector.http: JBAS018007: Error starting web connector
+      service jboss.serverManagement.controller.management.http: org.jboss.msc.service.StartException in service jboss.serverManagement.controller.management.http: Address already in use /128.199.255.162:9990
+      service jboss.remoting.server.remoting-connector: org.jboss.msc.service.StartException in service jboss.remoting.server.remoting-connector: JBAS017112: Address already in use /128.199.255.162:4447
+
+17:08:19,584 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015954: Admin console is not enabled
+17:08:19,585 ERROR [org.jboss.as] (Controller Boot Thread) JBAS015875: JBoss AS 7.1.1.Final "Brontes" started (with errors) in 5165ms - Started 130 of 213 services (7 services failed or missing dependencies, 74 services are passive or on-demand)
+18:05:28,319 ERROR [org.jboss.remoting.remote.connection] (Remoting "webservice:MANAGEMENT" read-1) JBREM000200: Remote connection failed: java.io.IOException: Received an invalid message length of 1195725856
+18:05:29,450 ERROR [org.jboss.remoting.remote.connection] (Remoting "webservice:MANAGEMENT" read-1) JBREM000200: Remote connection failed: java.io.IOException: Received an invalid message length of 67174480
+18:05:31,272 ERROR [org.jboss.remoting.remote.connection] (Remoting "webservice:MANAGEMENT" read-1) JBREM000200: Remote connection failed: java.io.IOException: Received an invalid message length of 67174480

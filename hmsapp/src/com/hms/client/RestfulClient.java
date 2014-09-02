@@ -23,7 +23,7 @@ public class RestfulClient {
 		doc.setName("Govind Reddy");
 		try{
 		Client client = Client.create();
-		WebResource webResource = client.resource("http://localhost:8080/hmsapp/hms/findDoctorByID");
+		WebResource webResource = client.resource("http://128.199.255.162:8080/hmsapp/hms/findDoctorByID");
 		ClientResponse response = webResource.accept(MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON).post(ClientResponse.class, doc);
 		
 		DoctorInfo  doc1 = response.getEntity(DoctorInfo.class);
@@ -42,7 +42,7 @@ public class RestfulClient {
 	public static void main(String[] args) {
 		RestfulClient client= new RestfulClient();
 		try {
-			client.findDoctorByID();
+			client.addOrUpdateDoctor();
 			//client.addOrUpdateDoctor();
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -64,7 +64,7 @@ public class RestfulClient {
 		doc.setName("Govind Reddy");
 		try{
 		Client client = Client.create();
-		WebResource webResource = client.resource("http://localhost:8080/hmsapp/hms/addOrUpdateDoctor");
+		WebResource webResource = client.resource("http://128.199.255.162:8080/hmsapp/hms/addOrUpdateDoctor");
 		ClientResponse response = webResource.accept(MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON).post(ClientResponse.class, doc);
 		
 			Response serviceResponse = response.getEntity(Response.class);
@@ -93,7 +93,7 @@ public class RestfulClient {
 		doc.setName("Govind Reddy");
 		try{
 		Client client = Client.create();
-		WebResource webResource = client.resource("http://localhost:8080/hmsapp/hms/findDoctorByID");
+		WebResource webResource = client.resource("http://128.199.255.162:8080/hmsapp/hms/findDoctorByID");
 		ClientResponse response = webResource.accept(MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON).post(ClientResponse.class, doc);
 		
 		DoctorInfo  doc1 = response.getEntity(DoctorInfo.class);

@@ -1,0 +1,547 @@
+04:13:13,585 ERROR [org.jboss.remoting.remote.connection] (Remoting "webservice:MANAGEMENT" read-1) JBREM000200: Remote connection failed: java.io.IOException: Received an invalid message length of 1195725856
+13:38:00,443 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 38) JBAS011800: Activating Naming Subsystem
+13:38:00,440 INFO  [org.jboss.as.osgi] (ServerService Thread Pool -- 39) JBAS011940: Activating OSGi Subsystem
+13:38:00,476 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 44) JBAS013101: Activating Security Subsystem
+13:38:00,538 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 48) JBAS015537: Activating WebServices Extension
+13:38:00,668 INFO  [org.jboss.as.connector] (MSC service thread 1-1) JBAS010408: Starting JCA Subsystem (JBoss IronJacamar 1.0.9.Final)
+13:38:00,753 INFO  [org.jboss.as.security] (MSC service thread 1-2) JBAS013100: Current PicketBox version=4.0.7.Final
+13:38:00,807 INFO  [org.jboss.as.naming] (MSC service thread 1-1) JBAS011802: Starting Naming Service
+13:38:01,079 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 27) JBAS010404: Deploying non-JDBC-compliant driver class org.postgresql.Driver (version 9.3)
+13:38:01,259 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 27) JBAS010403: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+13:38:01,340 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-1) JBAS015400: Bound mail session [java:jboss/mail/Default]
+13:38:01,576 INFO  [org.jboss.ws.common.management.AbstractServerConfig] (MSC service thread 1-2) JBoss Web Services - Stack CXF Server 4.0.2.GA
+13:38:01,826 ERROR [org.apache.coyote.http11.Http11Protocol] (MSC service thread 1-1) Error initializing endpoint: java.net.BindException: Address already in use /128.199.255.162:8080
+	at org.apache.tomcat.util.net.JIoEndpoint.init(JIoEndpoint.java:983) [jbossweb-7.0.13.Final.jar:]
+	at org.apache.coyote.http11.Http11Protocol.init(Http11Protocol.java:190) [jbossweb-7.0.13.Final.jar:]
+	at org.apache.catalina.connector.Connector.init(Connector.java:983) [jbossweb-7.0.13.Final.jar:]
+	at org.jboss.as.web.WebConnectorService.start(WebConnectorService.java:267) [jboss-as-web-7.1.1.Final.jar:7.1.1.Final]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_55]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_55]
+	at java.lang.Thread.run(Thread.java:744) [rt.jar:1.7.0_55]
+
+13:38:01,949 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-1) MSC00001: Failed to start service jboss.web.connector.http: org.jboss.msc.service.StartException in service jboss.web.connector.http: JBAS018007: Error starting web connector
+	at org.jboss.as.web.WebConnectorService.start(WebConnectorService.java:271)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_55]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_55]
+	at java.lang.Thread.run(Thread.java:744) [rt.jar:1.7.0_55]
+Caused by: LifecycleException:  Protocol handler initialization failed: java.net.BindException: Address already in use /128.199.255.162:8080
+	at org.apache.catalina.connector.Connector.init(Connector.java:985)
+	at org.jboss.as.web.WebConnectorService.start(WebConnectorService.java:267)
+	... 5 more
+
+13:38:02,644 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-2) MSC00001: Failed to start service jboss.serverManagement.controller.management.http: org.jboss.msc.service.StartException in service jboss.serverManagement.controller.management.http: Address already in use /128.199.255.162:9990
+	at org.jboss.as.server.mgmt.HttpManagementService.start(HttpManagementService.java:210) [jboss-as-server-7.1.1.Final.jar:7.1.1.Final]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_55]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_55]
+	at java.lang.Thread.run(Thread.java:744) [rt.jar:1.7.0_55]
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method) [rt.jar:1.7.0_55]
+	at sun.nio.ch.Net.bind(Net.java:444) [rt.jar:1.7.0_55]
+	at sun.nio.ch.Net.bind(Net.java:436) [rt.jar:1.7.0_55]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214) [rt.jar:1.7.0_55]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) [rt.jar:1.7.0_55]
+	at org.jboss.sun.net.httpserver.ServerImpl.<init>(ServerImpl.java:144)
+	at org.jboss.sun.net.httpserver.HttpServerImpl.<init>(HttpServerImpl.java:54)
+	at org.jboss.sun.net.httpserver.DefaultHttpServerProvider.createHttpServer(DefaultHttpServerProvider.java:38)
+	at org.jboss.com.sun.net.httpserver.HttpServer.create(HttpServer.java:147)
+	at org.jboss.as.domain.http.server.ManagementHttpServer.create(ManagementHttpServer.java:145)
+	at org.jboss.as.server.mgmt.HttpManagementService.start(HttpManagementService.java:177) [jboss-as-server-7.1.1.Final.jar:7.1.1.Final]
+	... 5 more
+
+13:38:02,678 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-1) MSC00001: Failed to start service jboss.remoting.server.management: org.jboss.msc.service.StartException in service jboss.remoting.server.management: JBAS017112: Address already in use /128.199.255.162:9999
+	at org.jboss.as.remoting.AbstractStreamServerService.start(AbstractStreamServerService.java:109)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_55]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_55]
+	at java.lang.Thread.run(Thread.java:744) [rt.jar:1.7.0_55]
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method) [rt.jar:1.7.0_55]
+	at sun.nio.ch.Net.bind(Net.java:444) [rt.jar:1.7.0_55]
+	at sun.nio.ch.Net.bind(Net.java:436) [rt.jar:1.7.0_55]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214) [rt.jar:1.7.0_55]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) [rt.jar:1.7.0_55]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:67) [rt.jar:1.7.0_55]
+	at org.xnio.nio.NioXnioWorker.createTcpServer(NioXnioWorker.java:287)
+	at org.xnio.XnioWorker.createStreamServer(XnioWorker.java:135)
+	at org.jboss.remoting3.remote.RemoteConnectionProvider$ProviderInterface.createServer(RemoteConnectionProvider.java:209)
+	at org.jboss.as.remoting.AbstractStreamServerService.start(AbstractStreamServerService.java:101)
+	... 5 more
+
+13:38:02,742 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-1) JBAS015012: Started FileSystemDeploymentService for directory /usr/local/share/jboss/standalone/deployments
+13:38:02,748 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-1) MSC00001: Failed to start service jboss.remoting.server.remoting-connector: org.jboss.msc.service.StartException in service jboss.remoting.server.remoting-connector: JBAS017112: Address already in use /128.199.255.162:4447
+	at org.jboss.as.remoting.AbstractStreamServerService.start(AbstractStreamServerService.java:109)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_55]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_55]
+	at java.lang.Thread.run(Thread.java:744) [rt.jar:1.7.0_55]
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method) [rt.jar:1.7.0_55]
+	at sun.nio.ch.Net.bind(Net.java:444) [rt.jar:1.7.0_55]
+	at sun.nio.ch.Net.bind(Net.java:436) [rt.jar:1.7.0_55]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214) [rt.jar:1.7.0_55]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) [rt.jar:1.7.0_55]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:67) [rt.jar:1.7.0_55]
+	at org.xnio.nio.NioXnioWorker.createTcpServer(NioXnioWorker.java:287)
+	at org.xnio.XnioWorker.createStreamServer(XnioWorker.java:135)
+	at org.jboss.remoting3.remote.RemoteConnectionProvider$ProviderInterface.createServer(RemoteConnectionProvider.java:209)
+	at org.jboss.as.remoting.AbstractStreamServerService.start(AbstractStreamServerService.java:101)
+	... 5 more
+
+13:38:02,906 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-2) JBAS010400: Bound data source [java:jboss/datasources/JavaWebserviceTest]
+13:38:02,908 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-2) JBAS010400: Bound data source [java:jboss/datasources/ExampleDS]
+13:38:03,345 INFO  [org.jboss.as.controller] (Controller Boot Thread) JBAS014774: Service status report
+JBAS014777:   Services which failed to start:      service jboss.web.connector.http: org.jboss.msc.service.StartException in service jboss.web.connector.http: JBAS018007: Error starting web connector
+      service jboss.remoting.server.management: org.jboss.msc.service.StartException in service jboss.remoting.server.management: JBAS017112: Address already in use /128.199.255.162:9999
+      service jboss.remoting.server.remoting-connector: org.jboss.msc.service.StartException in service jboss.remoting.server.remoting-connector: JBAS017112: Address already in use /128.199.255.162:4447
+      service jboss.serverManagement.controller.management.http: org.jboss.msc.service.StartException in service jboss.serverManagement.controller.management.http: Address already in use /128.199.255.162:9990
+
+13:38:03,372 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015954: Admin console is not enabled
+13:38:03,373 ERROR [org.jboss.as] (Controller Boot Thread) JBAS015875: JBoss AS 7.1.1.Final "Brontes" started (with errors) in 6983ms - Started 130 of 213 services (7 services failed or missing dependencies, 74 services are passive or on-demand)
+16:09:24,133 INFO  [org.jboss.osgi.framework.internal.BundleManager] (MSC service thread 1-2) JBossOSGi Framework Core - 1.1.8.Final
+16:09:24,405 INFO  [org.jboss.osgi.framework.internal.BundleManager] (MSC service thread 1-2) Install bundle: system.bundle:0.0.0
+16:09:25,010 INFO  [org.jboss.osgi.framework.internal.BundleManager] (MSC service thread 1-1) Install bundle: org.apache.felix.log:1.0.0
+16:09:25,058 INFO  [org.jboss.osgi.framework.internal.BundleManager] (MSC service thread 1-2) Install bundle: org.apache.felix.configadmin:1.2.8
+16:09:25,077 INFO  [org.jboss.osgi.framework.internal.BundleManager] (MSC service thread 1-2) Install bundle: javax.transaction.api:0.0.0
+16:09:25,116 INFO  [org.jboss.osgi.framework.internal.BundleManager] (MSC service thread 1-2) Install bundle: jboss-as-osgi-configadmin:7.1.1.Final
+16:09:25,178 INFO  [org.jboss.osgi.framework.internal.BundleManager] (MSC service thread 1-1) Install bundle: jbosgi-http-api:1.0.5
+16:09:25,220 INFO  [org.jboss.osgi.framework.internal.BundleManager] (MSC service thread 1-1) Install bundle: jboss-osgi-logging:1.0.0
+16:09:25,525 INFO  [org.jboss.osgi.framework.internal.BundleManager] (MSC service thread 1-2) Install bundle: osgi.enterprise:4.2.0.201003190513
+16:09:25,740 INFO  [org.jboss.osgi.framework.internal.StartLevelPlugin] (MSC service thread 1-1) Starting bundles for start level: 1
+16:09:25,750 INFO  [org.jboss.osgi.framework.internal.HostBundleState] (MSC service thread 1-1) Bundle started: jbosgi-http-api:1.0.5
+16:09:25,757 INFO  [org.jboss.osgi.framework.internal.HostBundleState] (MSC service thread 1-1) Bundle started: osgi.enterprise:4.2.0.201003190513
+16:09:25,782 INFO  [org.jboss.osgi.framework.internal.HostBundleState] (MSC service thread 1-1) Bundle started: jboss-as-osgi-configadmin:7.1.1.Final
+16:09:25,801 INFO  [org.jboss.osgi.framework.internal.HostBundleState] (MSC service thread 1-1) Bundle started: jboss-osgi-logging:1.0.0
+16:09:25,838 INFO  [org.jboss.osgi.framework.internal.HostBundleState] (MSC service thread 1-1) Bundle started: org.apache.felix.log:1.0.0
+16:09:25,841 INFO  [org.jboss.osgi.framework.internal.HostBundleState] (MSC service thread 1-1) Bundle started: javax.transaction.api:0.0.0
+16:09:25,889 INFO  [org.jboss.osgi.framework.internal.HostBundleState] (MSC service thread 1-1) Bundle started: org.apache.felix.configadmin:1.2.8
+16:09:25,898 INFO  [org.jboss.osgi.framework.internal.FrameworkActive] (MSC service thread 1-1) OSGi Framework started
+07:19:31,016 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 31) JBAS010280: Activating Infinispan subsystem.
+07:19:31,086 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 44) JBAS013101: Activating Security Subsystem
+07:19:31,115 INFO  [org.jboss.as.configadmin] (ServerService Thread Pool -- 26) JBAS016200: Activating ConfigAdmin Subsystem
+07:19:31,052 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 38) JBAS011800: Activating Naming Subsystem
+07:19:31,056 INFO  [org.jboss.as.osgi] (ServerService Thread Pool -- 39) JBAS011940: Activating OSGi Subsystem
+07:19:31,122 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 48) JBAS015537: Activating WebServices Extension
+07:19:31,412 INFO  [org.jboss.as.security] (MSC service thread 1-1) JBAS013100: Current PicketBox version=4.0.7.Final
+07:19:31,458 INFO  [org.jboss.as.connector] (MSC service thread 1-2) JBAS010408: Starting JCA Subsystem (JBoss IronJacamar 1.0.9.Final)
+07:19:31,786 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 27) JBAS010404: Deploying non-JDBC-compliant driver class org.postgresql.Driver (version 9.3)
+07:19:31,850 INFO  [org.jboss.as.naming] (MSC service thread 1-2) JBAS011802: Starting Naming Service
+07:19:31,852 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 27) JBAS010403: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+07:19:32,238 INFO  [org.jboss.ws.common.management.AbstractServerConfig] (MSC service thread 1-2) JBoss Web Services - Stack CXF Server 4.0.2.GA
+07:19:32,472 ERROR [org.apache.coyote.http11.Http11Protocol] (MSC service thread 1-1) Error initializing endpoint: java.net.BindException: Address already in use /128.199.255.162:8080
+	at org.apache.tomcat.util.net.JIoEndpoint.init(JIoEndpoint.java:983) [jbossweb-7.0.13.Final.jar:]
+	at org.apache.coyote.http11.Http11Protocol.init(Http11Protocol.java:190) [jbossweb-7.0.13.Final.jar:]
+	at org.apache.catalina.connector.Connector.init(Connector.java:983) [jbossweb-7.0.13.Final.jar:]
+	at org.jboss.as.web.WebConnectorService.start(WebConnectorService.java:267) [jboss-as-web-7.1.1.Final.jar:7.1.1.Final]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_55]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_55]
+	at java.lang.Thread.run(Thread.java:744) [rt.jar:1.7.0_55]
+
+07:19:32,495 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-2) JBAS015400: Bound mail session [java:jboss/mail/Default]
+07:19:32,533 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-1) MSC00001: Failed to start service jboss.web.connector.http: org.jboss.msc.service.StartException in service jboss.web.connector.http: JBAS018007: Error starting web connector
+	at org.jboss.as.web.WebConnectorService.start(WebConnectorService.java:271)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_55]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_55]
+	at java.lang.Thread.run(Thread.java:744) [rt.jar:1.7.0_55]
+Caused by: LifecycleException:  Protocol handler initialization failed: java.net.BindException: Address already in use /128.199.255.162:8080
+	at org.apache.catalina.connector.Connector.init(Connector.java:985)
+	at org.jboss.as.web.WebConnectorService.start(WebConnectorService.java:267)
+	... 5 more
+
+07:19:33,173 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-2) MSC00001: Failed to start service jboss.serverManagement.controller.management.http: org.jboss.msc.service.StartException in service jboss.serverManagement.controller.management.http: Address already in use /128.199.255.162:9990
+	at org.jboss.as.server.mgmt.HttpManagementService.start(HttpManagementService.java:210) [jboss-as-server-7.1.1.Final.jar:7.1.1.Final]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_55]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_55]
+	at java.lang.Thread.run(Thread.java:744) [rt.jar:1.7.0_55]
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method) [rt.jar:1.7.0_55]
+	at sun.nio.ch.Net.bind(Net.java:444) [rt.jar:1.7.0_55]
+	at sun.nio.ch.Net.bind(Net.java:436) [rt.jar:1.7.0_55]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214) [rt.jar:1.7.0_55]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) [rt.jar:1.7.0_55]
+	at org.jboss.sun.net.httpserver.ServerImpl.<init>(ServerImpl.java:144)
+	at org.jboss.sun.net.httpserver.HttpServerImpl.<init>(HttpServerImpl.java:54)
+	at org.jboss.sun.net.httpserver.DefaultHttpServerProvider.createHttpServer(DefaultHttpServerProvider.java:38)
+	at org.jboss.com.sun.net.httpserver.HttpServer.create(HttpServer.java:147)
+	at org.jboss.as.domain.http.server.ManagementHttpServer.create(ManagementHttpServer.java:145)
+	at org.jboss.as.server.mgmt.HttpManagementService.start(HttpManagementService.java:177) [jboss-as-server-7.1.1.Final.jar:7.1.1.Final]
+	... 5 more
+
+07:19:33,201 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-1) MSC00001: Failed to start service jboss.remoting.server.management: org.jboss.msc.service.StartException in service jboss.remoting.server.management: JBAS017112: Address already in use /128.199.255.162:9999
+	at org.jboss.as.remoting.AbstractStreamServerService.start(AbstractStreamServerService.java:109)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_55]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_55]
+	at java.lang.Thread.run(Thread.java:744) [rt.jar:1.7.0_55]
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method) [rt.jar:1.7.0_55]
+	at sun.nio.ch.Net.bind(Net.java:444) [rt.jar:1.7.0_55]
+	at sun.nio.ch.Net.bind(Net.java:436) [rt.jar:1.7.0_55]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214) [rt.jar:1.7.0_55]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) [rt.jar:1.7.0_55]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:67) [rt.jar:1.7.0_55]
+	at org.xnio.nio.NioXnioWorker.createTcpServer(NioXnioWorker.java:287)
+	at org.xnio.XnioWorker.createStreamServer(XnioWorker.java:135)
+	at org.jboss.remoting3.remote.RemoteConnectionProvider$ProviderInterface.createServer(RemoteConnectionProvider.java:209)
+	at org.jboss.as.remoting.AbstractStreamServerService.start(AbstractStreamServerService.java:101)
+	... 5 more
+
+07:19:33,264 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-1) JBAS015012: Started FileSystemDeploymentService for directory /usr/local/share/jboss/standalone/deployments
+07:19:33,269 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-1) MSC00001: Failed to start service jboss.remoting.server.remoting-connector: org.jboss.msc.service.StartException in service jboss.remoting.server.remoting-connector: JBAS017112: Address already in use /128.199.255.162:4447
+	at org.jboss.as.remoting.AbstractStreamServerService.start(AbstractStreamServerService.java:109)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_55]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_55]
+	at java.lang.Thread.run(Thread.java:744) [rt.jar:1.7.0_55]
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method) [rt.jar:1.7.0_55]
+	at sun.nio.ch.Net.bind(Net.java:444) [rt.jar:1.7.0_55]
+	at sun.nio.ch.Net.bind(Net.java:436) [rt.jar:1.7.0_55]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214) [rt.jar:1.7.0_55]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) [rt.jar:1.7.0_55]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:67) [rt.jar:1.7.0_55]
+	at org.xnio.nio.NioXnioWorker.createTcpServer(NioXnioWorker.java:287)
+	at org.xnio.XnioWorker.createStreamServer(XnioWorker.java:135)
+	at org.jboss.remoting3.remote.RemoteConnectionProvider$ProviderInterface.createServer(RemoteConnectionProvider.java:209)
+	at org.jboss.as.remoting.AbstractStreamServerService.start(AbstractStreamServerService.java:101)
+	... 5 more
+
+07:19:33,411 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-2) JBAS010400: Bound data source [java:jboss/datasources/ExampleDS]
+07:19:33,412 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-1) JBAS010400: Bound data source [java:jboss/datasources/JavaWebserviceTest]
+07:19:33,872 INFO  [org.jboss.as.controller] (Controller Boot Thread) JBAS014774: Service status report
+JBAS014777:   Services which failed to start:      service jboss.remoting.server.remoting-connector: org.jboss.msc.service.StartException in service jboss.remoting.server.remoting-connector: JBAS017112: Address already in use /128.199.255.162:4447
+      service jboss.serverManagement.controller.management.http: org.jboss.msc.service.StartException in service jboss.serverManagement.controller.management.http: Address already in use /128.199.255.162:9990
+      service jboss.remoting.server.management: org.jboss.msc.service.StartException in service jboss.remoting.server.management: JBAS017112: Address already in use /128.199.255.162:9999
+      service jboss.web.connector.http: org.jboss.msc.service.StartException in service jboss.web.connector.http: JBAS018007: Error starting web connector
+
+07:19:33,920 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015954: Admin console is not enabled
+07:19:33,926 ERROR [org.jboss.as] (Controller Boot Thread) JBAS015875: JBoss AS 7.1.1.Final "Brontes" started (with errors) in 7143ms - Started 130 of 213 services (7 services failed or missing dependencies, 74 services are passive or on-demand)
+07:24:37,648 INFO  [org.jboss.as.configadmin] (ServerService Thread Pool -- 26) JBAS016200: Activating ConfigAdmin Subsystem
+07:24:37,678 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 31) JBAS010280: Activating Infinispan subsystem.
+07:24:37,774 INFO  [org.jboss.as.connector] (MSC service thread 1-2) JBAS010408: Starting JCA Subsystem (JBoss IronJacamar 1.0.9.Final)
+07:24:37,800 INFO  [org.jboss.as.osgi] (ServerService Thread Pool -- 39) JBAS011940: Activating OSGi Subsystem
+07:24:37,835 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 44) JBAS013101: Activating Security Subsystem
+07:24:37,890 INFO  [org.jboss.as.security] (MSC service thread 1-2) JBAS013100: Current PicketBox version=4.0.7.Final
+07:24:37,899 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 38) JBAS011800: Activating Naming Subsystem
+07:24:37,919 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 48) JBAS015537: Activating WebServices Extension
+07:24:38,045 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 27) JBAS010404: Deploying non-JDBC-compliant driver class org.postgresql.Driver (version 9.3)
+07:24:38,206 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 27) JBAS010403: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+07:24:38,433 INFO  [org.jboss.as.naming] (MSC service thread 1-2) JBAS011802: Starting Naming Service
+07:24:38,693 INFO  [org.jboss.ws.common.management.AbstractServerConfig] (MSC service thread 1-2) JBoss Web Services - Stack CXF Server 4.0.2.GA
+07:24:39,195 ERROR [org.apache.coyote.http11.Http11Protocol] (MSC service thread 1-2) Error initializing endpoint: java.net.BindException: Address already in use /128.199.255.162:8080
+	at org.apache.tomcat.util.net.JIoEndpoint.init(JIoEndpoint.java:983) [jbossweb-7.0.13.Final.jar:]
+	at org.apache.coyote.http11.Http11Protocol.init(Http11Protocol.java:190) [jbossweb-7.0.13.Final.jar:]
+	at org.apache.catalina.connector.Connector.init(Connector.java:983) [jbossweb-7.0.13.Final.jar:]
+	at org.jboss.as.web.WebConnectorService.start(WebConnectorService.java:267) [jboss-as-web-7.1.1.Final.jar:7.1.1.Final]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_55]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_55]
+	at java.lang.Thread.run(Thread.java:744) [rt.jar:1.7.0_55]
+
+07:24:39,205 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-1) JBAS015400: Bound mail session [java:jboss/mail/Default]
+07:24:39,427 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-2) MSC00001: Failed to start service jboss.web.connector.http: org.jboss.msc.service.StartException in service jboss.web.connector.http: JBAS018007: Error starting web connector
+	at org.jboss.as.web.WebConnectorService.start(WebConnectorService.java:271)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_55]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_55]
+	at java.lang.Thread.run(Thread.java:744) [rt.jar:1.7.0_55]
+Caused by: LifecycleException:  Protocol handler initialization failed: java.net.BindException: Address already in use /128.199.255.162:8080
+	at org.apache.catalina.connector.Connector.init(Connector.java:985)
+	at org.jboss.as.web.WebConnectorService.start(WebConnectorService.java:267)
+	... 5 more
+
+07:24:39,747 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-2) MSC00001: Failed to start service jboss.serverManagement.controller.management.http: org.jboss.msc.service.StartException in service jboss.serverManagement.controller.management.http: Address already in use /128.199.255.162:9990
+	at org.jboss.as.server.mgmt.HttpManagementService.start(HttpManagementService.java:210) [jboss-as-server-7.1.1.Final.jar:7.1.1.Final]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_55]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_55]
+	at java.lang.Thread.run(Thread.java:744) [rt.jar:1.7.0_55]
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method) [rt.jar:1.7.0_55]
+	at sun.nio.ch.Net.bind(Net.java:444) [rt.jar:1.7.0_55]
+	at sun.nio.ch.Net.bind(Net.java:436) [rt.jar:1.7.0_55]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214) [rt.jar:1.7.0_55]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) [rt.jar:1.7.0_55]
+	at org.jboss.sun.net.httpserver.ServerImpl.<init>(ServerImpl.java:144)
+	at org.jboss.sun.net.httpserver.HttpServerImpl.<init>(HttpServerImpl.java:54)
+	at org.jboss.sun.net.httpserver.DefaultHttpServerProvider.createHttpServer(DefaultHttpServerProvider.java:38)
+	at org.jboss.com.sun.net.httpserver.HttpServer.create(HttpServer.java:147)
+	at org.jboss.as.domain.http.server.ManagementHttpServer.create(ManagementHttpServer.java:145)
+	at org.jboss.as.server.mgmt.HttpManagementService.start(HttpManagementService.java:177) [jboss-as-server-7.1.1.Final.jar:7.1.1.Final]
+	... 5 more
+
+07:24:39,812 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-2) MSC00001: Failed to start service jboss.remoting.server.management: org.jboss.msc.service.StartException in service jboss.remoting.server.management: JBAS017112: Address already in use /128.199.255.162:9999
+	at org.jboss.as.remoting.AbstractStreamServerService.start(AbstractStreamServerService.java:109)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_55]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_55]
+	at java.lang.Thread.run(Thread.java:744) [rt.jar:1.7.0_55]
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method) [rt.jar:1.7.0_55]
+	at sun.nio.ch.Net.bind(Net.java:444) [rt.jar:1.7.0_55]
+	at sun.nio.ch.Net.bind(Net.java:436) [rt.jar:1.7.0_55]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214) [rt.jar:1.7.0_55]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) [rt.jar:1.7.0_55]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:67) [rt.jar:1.7.0_55]
+	at org.xnio.nio.NioXnioWorker.createTcpServer(NioXnioWorker.java:287)
+	at org.xnio.XnioWorker.createStreamServer(XnioWorker.java:135)
+	at org.jboss.remoting3.remote.RemoteConnectionProvider$ProviderInterface.createServer(RemoteConnectionProvider.java:209)
+	at org.jboss.as.remoting.AbstractStreamServerService.start(AbstractStreamServerService.java:101)
+	... 5 more
+
+07:24:39,891 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-2) JBAS015012: Started FileSystemDeploymentService for directory /usr/local/share/jboss/standalone/deployments
+07:24:39,888 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-1) MSC00001: Failed to start service jboss.remoting.server.remoting-connector: org.jboss.msc.service.StartException in service jboss.remoting.server.remoting-connector: JBAS017112: Address already in use /128.199.255.162:4447
+	at org.jboss.as.remoting.AbstractStreamServerService.start(AbstractStreamServerService.java:109)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_55]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_55]
+	at java.lang.Thread.run(Thread.java:744) [rt.jar:1.7.0_55]
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method) [rt.jar:1.7.0_55]
+	at sun.nio.ch.Net.bind(Net.java:444) [rt.jar:1.7.0_55]
+	at sun.nio.ch.Net.bind(Net.java:436) [rt.jar:1.7.0_55]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214) [rt.jar:1.7.0_55]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) [rt.jar:1.7.0_55]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:67) [rt.jar:1.7.0_55]
+	at org.xnio.nio.NioXnioWorker.createTcpServer(NioXnioWorker.java:287)
+	at org.xnio.XnioWorker.createStreamServer(XnioWorker.java:135)
+	at org.jboss.remoting3.remote.RemoteConnectionProvider$ProviderInterface.createServer(RemoteConnectionProvider.java:209)
+	at org.jboss.as.remoting.AbstractStreamServerService.start(AbstractStreamServerService.java:101)
+	... 5 more
+
+07:24:39,962 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-2) JBAS010400: Bound data source [java:jboss/datasources/ExampleDS]
+07:24:39,963 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-1) JBAS010400: Bound data source [java:jboss/datasources/JavaWebserviceTest]
+07:24:40,425 INFO  [org.jboss.as.controller] (Controller Boot Thread) JBAS014774: Service status report
+JBAS014777:   Services which failed to start:      service jboss.serverManagement.controller.management.http: org.jboss.msc.service.StartException in service jboss.serverManagement.controller.management.http: Address already in use /128.199.255.162:9990
+      service jboss.remoting.server.management: org.jboss.msc.service.StartException in service jboss.remoting.server.management: JBAS017112: Address already in use /128.199.255.162:9999
+      service jboss.web.connector.http: org.jboss.msc.service.StartException in service jboss.web.connector.http: JBAS018007: Error starting web connector
+      service jboss.remoting.server.remoting-connector: org.jboss.msc.service.StartException in service jboss.remoting.server.remoting-connector: JBAS017112: Address already in use /128.199.255.162:4447
+
+07:24:40,472 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015954: Admin console is not enabled
+07:24:40,477 ERROR [org.jboss.as] (Controller Boot Thread) JBAS015875: JBoss AS 7.1.1.Final "Brontes" started (with errors) in 5734ms - Started 130 of 213 services (7 services failed or missing dependencies, 74 services are passive or on-demand)
+07:41:54,263 INFO  [org.jboss.as.configadmin] (ServerService Thread Pool -- 26) JBAS016200: Activating ConfigAdmin Subsystem
+07:41:54,292 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 31) JBAS010280: Activating Infinispan subsystem.
+07:41:54,402 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 38) JBAS011800: Activating Naming Subsystem
+07:41:54,430 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 44) JBAS013101: Activating Security Subsystem
+07:41:54,454 INFO  [org.jboss.as.connector] (MSC service thread 1-1) JBAS010408: Starting JCA Subsystem (JBoss IronJacamar 1.0.9.Final)
+07:41:54,435 INFO  [org.jboss.as.osgi] (ServerService Thread Pool -- 39) JBAS011940: Activating OSGi Subsystem
+07:41:54,515 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 48) JBAS015537: Activating WebServices Extension
+07:41:54,622 INFO  [org.jboss.as.security] (MSC service thread 1-1) JBAS013100: Current PicketBox version=4.0.7.Final
+07:41:54,637 INFO  [org.jboss.as.naming] (MSC service thread 1-2) JBAS011802: Starting Naming Service
+07:41:54,747 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 27) JBAS010404: Deploying non-JDBC-compliant driver class org.postgresql.Driver (version 9.3)
+07:41:54,774 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 27) JBAS010403: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+07:41:55,151 INFO  [org.jboss.ws.common.management.AbstractServerConfig] (MSC service thread 1-2) JBoss Web Services - Stack CXF Server 4.0.2.GA
+07:41:55,255 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-2) JBAS015400: Bound mail session [java:jboss/mail/Default]
+07:41:55,584 INFO  [org.apache.coyote.http11.Http11Protocol] (MSC service thread 1-2) Starting Coyote HTTP/1.1 on http--128.199.255.162-8080
+07:41:56,318 INFO  [org.jboss.as.remoting] (MSC service thread 1-1) JBAS017100: Listening on /128.199.255.162:9999
+07:41:56,366 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-2) JBAS015012: Started FileSystemDeploymentService for directory /usr/local/share/jboss/standalone/deployments
+07:41:56,467 INFO  [org.jboss.as.remoting] (MSC service thread 1-2) JBAS017100: Listening on /128.199.255.162:4447
+07:41:56,470 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-1) JBAS010400: Bound data source [java:jboss/datasources/JavaWebserviceTest]
+07:41:56,474 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-1) JBAS010400: Bound data source [java:jboss/datasources/ExampleDS]
+07:41:56,510 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015951: Admin console listening on http://128.199.255.162:9990
+07:41:56,514 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015874: JBoss AS 7.1.1.Final "Brontes" started in 4925ms - Started 137 of 213 services (74 services are passive or on-demand)
+07:51:57,922 INFO  [org.apache.coyote.http11.Http11Protocol] (MSC service thread 1-2) Pausing Coyote HTTP/1.1 on http--128.199.255.162-8080
+07:51:57,923 INFO  [org.apache.coyote.http11.Http11Protocol] (MSC service thread 1-2) Stopping Coyote HTTP/1.1 on http--128.199.255.162-8080
+07:51:57,925 INFO  [org.jboss.as.osgi] (MSC service thread 1-1) JBAS011942: Stopping OSGi Framework
+13:30:09,904 INFO  [org.jboss.as.configadmin] (ServerService Thread Pool -- 26) JBAS016200: Activating ConfigAdmin Subsystem
+13:30:09,935 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 31) JBAS010280: Activating Infinispan subsystem.
+13:30:10,042 INFO  [org.jboss.as.connector] (MSC service thread 1-1) JBAS010408: Starting JCA Subsystem (JBoss IronJacamar 1.0.9.Final)
+13:30:10,053 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 44) JBAS013101: Activating Security Subsystem
+13:30:10,075 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 38) JBAS011800: Activating Naming Subsystem
+13:30:10,067 INFO  [org.jboss.as.osgi] (ServerService Thread Pool -- 39) JBAS011940: Activating OSGi Subsystem
+13:30:10,160 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 48) JBAS015537: Activating WebServices Extension
+13:30:10,239 INFO  [org.jboss.as.security] (MSC service thread 1-1) JBAS013100: Current PicketBox version=4.0.7.Final
+13:30:10,438 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 27) JBAS010404: Deploying non-JDBC-compliant driver class org.postgresql.Driver (version 9.3)
+13:30:10,502 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 27) JBAS010403: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+13:30:10,744 INFO  [org.jboss.as.naming] (MSC service thread 1-1) JBAS011802: Starting Naming Service
+13:30:11,011 INFO  [org.jboss.ws.common.management.AbstractServerConfig] (MSC service thread 1-1) JBoss Web Services - Stack CXF Server 4.0.2.GA
+13:30:11,120 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-1) JBAS015400: Bound mail session [java:jboss/mail/Default]
+13:30:11,295 INFO  [org.apache.coyote.http11.Http11Protocol] (MSC service thread 1-2) Starting Coyote HTTP/1.1 on http--128.199.255.162-8080
+13:30:12,091 INFO  [org.jboss.as.remoting] (MSC service thread 1-1) JBAS017100: Listening on /128.199.255.162:9999
+13:30:12,134 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-1) JBAS015012: Started FileSystemDeploymentService for directory /usr/local/share/jboss/standalone/deployments
+13:30:12,159 INFO  [org.jboss.as.remoting] (MSC service thread 1-1) JBAS017100: Listening on /128.199.255.162:4447
+13:30:12,257 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-2) JBAS010400: Bound data source [java:jboss/datasources/ExampleDS]
+13:30:12,258 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-2) JBAS010400: Bound data source [java:jboss/datasources/JavaWebserviceTest]
+13:30:12,290 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015951: Admin console listening on http://128.199.255.162:9990
+13:30:12,291 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015874: JBoss AS 7.1.1.Final "Brontes" started in 5382ms - Started 137 of 213 services (74 services are passive or on-demand)
+14:12:38,140 INFO  [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 1) JBAS015009: Scan found incompletely copied file content for deployment /usr/local/share/jboss/standalone/deployments/hmsapp.ear. Deployment changes will not be processed until all content is complete.
+14:14:18,010 ERROR [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 2) JBAS015052: Did not receive a response to the deployment operation within the allowed timeout period [60 seconds]. Check the server configuration file and the server logs to find more about the status of the deployment.
+14:21:18,131 INFO  [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 2) JBAS015009: Scan found incompletely copied file content for deployment /usr/local/share/jboss/standalone/deployments/hmsapp.ear. Deployment changes will not be processed until all content is complete.
+14:22:10,843 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015876: Starting deployment of "hmsapp.ear"
+14:22:12,473 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015876: Starting deployment of "hmsapp.war"
+14:22:18,200 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) Class Path entry activation.jar in "/content/hmsapp.ear/hmsapp.war/WEB-INF/lib/mail-1.4.jar"  does not point to a valid jar for a Class-Path reference.
+14:22:18,229 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) Class Path entry jaxb-api.jar in "/content/hmsapp.ear/hmsapp.war/WEB-INF/lib/jaxb-impl-2.1.10.jar"  does not point to a valid jar for a Class-Path reference.
+14:22:18,259 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) Class Path entry activation.jar in "/content/hmsapp.ear/hmsapp.war/WEB-INF/lib/jaxb-impl-2.1.10.jar"  does not point to a valid jar for a Class-Path reference.
+14:22:18,282 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) Class Path entry jsr173_1.0_api.jar in "/content/hmsapp.ear/hmsapp.war/WEB-INF/lib/jaxb-impl-2.1.10.jar"  does not point to a valid jar for a Class-Path reference.
+14:22:18,299 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) Class Path entry jaxb1-impl.jar in "/content/hmsapp.ear/hmsapp.war/WEB-INF/lib/jaxb-impl-2.1.10.jar"  does not point to a valid jar for a Class-Path reference.
+14:22:18,808 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONRootElementProvider$Wadl' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:18,838 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONRootElementProvider$App' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:18,856 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONRootElementProvider$General' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:18,886 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONJAXBElementProvider$App' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:18,903 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONJAXBElementProvider$General' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:18,928 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONListElementProvider$App' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:18,958 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONListElementProvider$General' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:18,976 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONArrayProvider$App' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:18,993 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONArrayProvider$General' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:19,023 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONObjectProvider$App' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:19,040 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONObjectProvider$General' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:19,079 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONRootElementProvider$Wadl' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:19,102 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONRootElementProvider$App' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:19,115 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONRootElementProvider$General' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:19,137 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONJAXBElementProvider$App' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:19,163 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONJAXBElementProvider$General' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:19,183 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONListElementProvider$App' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:19,200 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONListElementProvider$General' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:19,221 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONArrayProvider$App' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:19,254 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONArrayProvider$General' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:19,267 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONObjectProvider$App' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:19,278 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONObjectProvider$General' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:19,303 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.server.impl.model.parameter.multivalued.StringReaderProviders$TypeFromStringEnum' for service type 'com.sun.jersey.spi.StringReaderProvider'
+14:22:19,335 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.server.impl.model.parameter.multivalued.StringReaderProviders$TypeValueOf' for service type 'com.sun.jersey.spi.StringReaderProvider'
+14:22:19,362 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.server.impl.model.parameter.multivalued.StringReaderProviders$TypeFromString' for service type 'com.sun.jersey.spi.StringReaderProvider'
+14:22:19,407 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.server.impl.model.parameter.multivalued.StringReaderProviders$StringConstructor' for service type 'com.sun.jersey.spi.StringReaderProvider'
+14:22:19,423 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.server.impl.model.parameter.multivalued.StringReaderProviders$DateProvider' for service type 'com.sun.jersey.spi.StringReaderProvider'
+14:22:19,444 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.server.impl.model.parameter.multivalued.JAXBStringReaderProviders$RootElementProvider' for service type 'com.sun.jersey.spi.StringReaderProvider'
+14:22:19,475 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$App' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:19,506 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$Text' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:19,523 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:19,546 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$App' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:19,567 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$Text' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:19,591 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:19,609 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$App' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:19,648 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$Text' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:19,671 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:19,685 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.SourceProvider$StreamSourceReader' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:19,704 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.SourceProvider$SAXSourceReader' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:19,730 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.SourceProvider$DOMSourceReader' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:19,751 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$App' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:19,778 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$Text' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:19,795 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$General' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:19,815 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$App' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:19,850 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$Text' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:19,860 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:19,880 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$App' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:19,901 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$Text' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:19,923 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:19,943 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$App' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:19,953 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$Text' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:19,966 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:19,976 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.SourceProvider$SourceWriter' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:20,003 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$App' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:20,026 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$Text' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:20,046 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:20,057 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$App' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:20,071 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$Text' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:20,080 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:20,089 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$App' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:20,099 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$Text' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:20,112 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:20,121 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.SourceProvider$SourceWriter' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:20,130 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONRootElementProvider$Wadl' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:20,142 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONRootElementProvider$App' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:20,155 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONRootElementProvider$General' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:20,160 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONJAXBElementProvider$App' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:20,171 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONJAXBElementProvider$General' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:20,181 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONListElementProvider$App' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:20,192 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONListElementProvider$General' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:20,197 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONArrayProvider$App' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:20,208 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONArrayProvider$General' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:20,221 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONObjectProvider$App' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:20,227 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONObjectProvider$General' for service type 'javax.ws.rs.ext.MessageBodyWriter'
+14:22:20,247 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$App' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:20,251 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$Text' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:20,263 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:20,275 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$App' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:20,284 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$Text' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:20,293 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:20,306 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$App' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:20,315 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$Text' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:20,336 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:20,364 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.SourceProvider$StreamSourceReader' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:20,385 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.SourceProvider$SAXSourceReader' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:20,397 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.SourceProvider$DOMSourceReader' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:20,412 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$App' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:20,428 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$Text' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:20,474 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$General' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:20,498 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONRootElementProvider$Wadl' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:20,516 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONRootElementProvider$App' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:20,525 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONRootElementProvider$General' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:20,543 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONJAXBElementProvider$App' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:20,552 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONJAXBElementProvider$General' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:20,575 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONListElementProvider$App' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:20,584 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONListElementProvider$General' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:20,596 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONArrayProvider$App' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:20,605 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONArrayProvider$General' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:20,618 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONObjectProvider$App' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:20,625 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.json.impl.provider.entity.JSONObjectProvider$General' for service type 'javax.ws.rs.ext.MessageBodyReader'
+14:22:20,644 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.server.impl.model.parameter.multivalued.StringReaderProviders$TypeFromStringEnum' for service type 'com.sun.jersey.spi.StringReaderProvider'
+14:22:20,654 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.server.impl.model.parameter.multivalued.StringReaderProviders$TypeValueOf' for service type 'com.sun.jersey.spi.StringReaderProvider'
+14:22:20,663 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.server.impl.model.parameter.multivalued.StringReaderProviders$TypeFromString' for service type 'com.sun.jersey.spi.StringReaderProvider'
+14:22:20,673 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.server.impl.model.parameter.multivalued.StringReaderProviders$StringConstructor' for service type 'com.sun.jersey.spi.StringReaderProvider'
+14:22:20,694 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.server.impl.model.parameter.multivalued.StringReaderProviders$DateProvider' for service type 'com.sun.jersey.spi.StringReaderProvider'
+14:22:20,712 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015893: Encountered invalid class name 'com.sun.jersey.server.impl.model.parameter.multivalued.JAXBStringReaderProviders$RootElementProvider' for service type 'com.sun.jersey.spi.StringReaderProvider'
+14:22:22,208 WARN  [org.jboss.as.ee] (MSC service thread 1-2) JBAS011006: Not installing optional component org.springframework.web.context.request.async.StandardServletAsyncWebRequest due to exception: org.jboss.as.server.deployment.DeploymentUnitProcessingException: JBAS011054: Could not find default constructor for class org.springframework.web.context.request.async.StandardServletAsyncWebRequest
+	at org.jboss.as.ee.component.ComponentDescription$DefaultComponentConfigurator.configure(ComponentDescription.java:606)
+	at org.jboss.as.ee.component.deployers.EEModuleConfigurationProcessor.deploy(EEModuleConfigurationProcessor.java:81)
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:113) [jboss-as-server-7.1.1.Final.jar:7.1.1.Final]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_55]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_55]
+	at java.lang.Thread.run(Thread.java:744) [rt.jar:1.7.0_55]
+
+14:22:22,581 WARN  [org.jboss.as.ee] (MSC service thread 1-2) JBAS011006: Not installing optional component org.springframework.http.server.ServletServerHttpAsyncRequestControl due to exception: org.jboss.as.server.deployment.DeploymentUnitProcessingException: JBAS011054: Could not find default constructor for class org.springframework.http.server.ServletServerHttpAsyncRequestControl
+	at org.jboss.as.ee.component.ComponentDescription$DefaultComponentConfigurator.configure(ComponentDescription.java:606)
+	at org.jboss.as.ee.component.deployers.EEModuleConfigurationProcessor.deploy(EEModuleConfigurationProcessor.java:81)
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:113) [jboss-as-server-7.1.1.Final.jar:7.1.1.Final]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_55]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_55]
+	at java.lang.Thread.run(Thread.java:744) [rt.jar:1.7.0_55]
+
+14:22:23,543 INFO  [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/hmsapp]] (MSC service thread 1-2) No Spring WebApplicationInitializer types detected on classpath
+14:22:24,241 INFO  [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/hmsapp]] (MSC service thread 1-2) Initializing Spring FrameworkServlet 'hmsapp'
+14:22:24,270 INFO  [org.springframework.web.servlet.DispatcherServlet] (MSC service thread 1-2) FrameworkServlet 'hmsapp': initialization started
+14:22:24,347 INFO  [org.springframework.web.context.support.XmlWebApplicationContext] (MSC service thread 1-2) Refreshing WebApplicationContext for namespace 'hmsapp-servlet': startup date [Tue Sep 02 14:22:24 EDT 2014]; root of context hierarchy
+14:22:24,532 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] (MSC service thread 1-2) Loading XML bean definitions from ServletContext resource [/WEB-INF/hmsapp-servlet.xml]
+14:22:27,255 INFO  [org.springframework.context.support.PropertySourcesPlaceholderConfigurer] (MSC service thread 1-2) Loading properties file from class path resource [com/hms/properties/config.properties]
+14:22:27,287 INFO  [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] (MSC service thread 1-2) JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+14:22:28,247 INFO  [org.hibernate.annotations.common.Version] (MSC service thread 1-2) HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+14:22:28,269 INFO  [org.hibernate.Version] (MSC service thread 1-2) HHH000412: Hibernate Core {4.0.1.Final}
+14:22:28,296 INFO  [org.hibernate.cfg.Environment] (MSC service thread 1-2) HHH000206: hibernate.properties not found
+14:22:28,305 INFO  [org.hibernate.cfg.Environment] (MSC service thread 1-2) HHH000021: Bytecode provider name : javassist
+14:22:30,472 INFO  [org.hibernate.dialect.Dialect] (MSC service thread 1-2) HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+14:22:30,537 INFO  [org.hibernate.engine.jdbc.internal.LobCreatorBuilder] (MSC service thread 1-2) HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+14:22:30,607 INFO  [org.hibernate.engine.transaction.internal.TransactionFactoryInitiator] (MSC service thread 1-2) HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+14:22:30,658 INFO  [org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory] (MSC service thread 1-2) HHH000397: Using ASTQueryTranslatorFactory
+14:22:30,794 INFO  [org.hibernate.validator.util.Version] (MSC service thread 1-2) Hibernate Validator 4.2.0.Final
+14:22:32,508 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] (MSC service thread 1-2) Mapped "{[/hms/addOrUpdateDoctor],methods=[POST],params=[],headers=[],consumes=[],produces=[application/json || application/xml],custom=[]}" onto public com.hms.model.Response com.hms.controller.ProviderController.addDoctor(com.hms.model.DoctorInfo)
+14:22:32,550 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] (MSC service thread 1-2) Mapped "{[/hms/deleteDoctor],methods=[POST],params=[],headers=[],consumes=[],produces=[application/json || application/xml],custom=[]}" onto public com.hms.model.Response com.hms.controller.ProviderController.deleteDoctor(com.hms.model.DoctorInfo)
+14:22:32,582 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] (MSC service thread 1-2) Mapped "{[/hms/findDoctorByAttributes],methods=[POST],params=[],headers=[],consumes=[],produces=[application/json || application/xml],custom=[]}" onto public com.hms.model.Response com.hms.controller.ProviderController.findDoctorstByAttributes(com.hms.model.DoctorInfo)
+14:22:32,608 INFO  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] (MSC service thread 1-2) Mapped "{[/hms/findDoctorByID],methods=[POST],params=[],headers=[],consumes=[],produces=[application/json || application/xml],custom=[]}" onto public com.hms.model.DoctorInfo com.hms.controller.ProviderController.findDoctorByID(com.hms.model.DoctorInfo)
+14:22:33,768 INFO  [org.springframework.oxm.jaxb.Jaxb2Marshaller] (MSC service thread 1-2) Creating JAXBContext with classes to be bound [class com.hms.model.DoctorInfo,class com.hms.model.PatientInfo,class com.hms.model.Response]
+14:22:34,328 INFO  [org.springframework.orm.hibernate4.HibernateTransactionManager] (MSC service thread 1-2) Using DataSource [org.jboss.jca.adapters.jdbc.WrapperDataSource@5c844586] of Hibernate SessionFactory for HibernateTransactionManager
+14:22:34,429 INFO  [org.springframework.web.servlet.DispatcherServlet] (MSC service thread 1-2) FrameworkServlet 'hmsapp': initialization completed in 10156 ms
+14:22:34,452 INFO  [org.jboss.web] (MSC service thread 1-2) JBAS018210: Registering web context: /hmsapp
+14:22:34,541 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018559: Deployed "hmsapp.ear"
