@@ -26,4 +26,6 @@ public Doctor getDoctorByID(Doctor doc) ;
 
 public	 List<Doctor>  getDoctorsByAttributes(Doctor doc);
 
+public List<Doctor> getDoctorsByAttribute(Doctor doc); 
+
 }
