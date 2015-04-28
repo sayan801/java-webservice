@@ -18,7 +18,7 @@ public class RestfulClient {
 		
 		DoctorInfo doc= new DoctorInfo();
 		doc.setIddoctors(300);
-		doc.setAddress("Govind Address");
+		doc.setAddress("chandra mridha");
 		doc.setContactNumber("9611125680");
 		doc.setName("Govind Reddy");
 		try{
@@ -43,7 +43,7 @@ public class RestfulClient {
 		RestfulClient client= new RestfulClient();
 		try {
 			client.addOrUpdateDoctor();
-			//client.addOrUpdateDoctor();
+			client.findDoctorByID();
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
